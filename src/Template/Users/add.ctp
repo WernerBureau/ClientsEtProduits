@@ -8,8 +8,6 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Customers'), ['controller' => 'Customers', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Customer'), ['controller' => 'Customers', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="users form large-9 medium-8 columns content">
@@ -17,7 +15,6 @@
     <fieldset>
         <legend><?= __('Add User') ?></legend>
         <?php
-            echo $this->Form->control('customer_id', ['options' => $customers]);
             echo $this->Form->control('email');
             echo $this->Form->control('password');
         ?>

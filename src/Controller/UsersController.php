@@ -13,6 +13,11 @@ use App\Controller\AppController;
 class UsersController extends AppController
 {
 
+    public function initialize() {
+        parent::initialize();
+        $this->Auth->allow(['logout', 'add']);
+    }
+
     /**
      * Index method
      *
@@ -20,9 +25,6 @@ class UsersController extends AppController
      */
     public function index()
     {
-        $this->paginate = [
-            'contain' => ['Customers']
-        ];
         $users = $this->paginate($this->Users);
 
         $this->set(compact('users'));
@@ -38,7 +40,7 @@ class UsersController extends AppController
     public function view($id = null)
     {
         $user = $this->Users->get($id, [
-            'contain' => ['Customers']
+            'contain' => []
         ]);
 
         $this->set('user', $user);
@@ -61,8 +63,7 @@ class UsersController extends AppController
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
-        $customers = $this->Users->Customers->find('list', ['limit' => 200]);
-        $this->set(compact('user', 'customers'));
+        $this->set(compact('user'));
     }
 
     /**
@@ -86,8 +87,7 @@ class UsersController extends AppController
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
-        $customers = $this->Users->Customers->find('list', ['limit' => 200]);
-        $this->set(compact('user', 'customers'));
+        $this->set(compact('user'));
     }
 
     /**
@@ -108,5 +108,17 @@ class UsersController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    public function login()
+    {
+        if ($this->request->is('post')) {
+            $user = $this->Auth->identify();
+            if ($user) {
+                $this->Auth->setUser($user);
+                return $this->redirect($this->Auth->redirectUrl());
+            }
+            $this->Flash->error('Your email or password is incorrect.');
+        }
     }
 }

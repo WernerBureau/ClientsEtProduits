@@ -50,6 +50,8 @@ class CustomerOrdersController extends AppController
         $customerOrder = $this->CustomerOrders->newEntity();
         if ($this->request->is('post')) {
             $customerOrder = $this->CustomerOrders->patchEntity($customerOrder, $this->request->getData());
+
+            $customerOrder->user_id = $this->Auth->user('id');
             if ($this->CustomerOrders->save($customerOrder)) {
                 $this->Flash->success(__('The customer order has been saved.'));
 
@@ -63,25 +65,28 @@ class CustomerOrdersController extends AppController
     /**
      * Edit method
      *
-     * @param string|null $id Customer Order id.
+     * @param string|null $customerId Customer Order id.
      * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function edit($id = null)
+    public function edit($customerId)
     {
-        $customerOrder = $this->CustomerOrders->get($id, [
-            'contain' => []
-        ]);
-        if ($this->request->is(['patch', 'post', 'put'])) {
-            $customerOrder = $this->CustomerOrders->patchEntity($customerOrder, $this->request->getData());
-            if ($this->CustomerOrders->save($customerOrder)) {
-                $this->Flash->success(__('The customer order has been saved.'));
+        $customerOrder = $this->CustomerOrders
+            ->findByCustomer_id($customerId)
+            ->firstOrFail();
 
+        if ($this->request->is(['post', 'put'])) {
+            $this->CustomerOrders->patchEntity($customerOrder, $this->request->getData(), [
+                // Added: Disable modification of user_id.
+                'accessibleFields' => ['user_id' => false]
+            ]);
+            if ($this->CustomerOrders->save($customerOrder)) {
+                $this->Flash->success(__('Your article has been updated.'));
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The customer order could not be saved. Please, try again.'));
+            $this->Flash->error(__('Unable to update your article.'));
         }
-        $this->set(compact('customerOrder'));
+        $this->set('article', $customerOrder);
     }
 
     /**
@@ -102,5 +107,14 @@ class CustomerOrdersController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    public function isAuthorized($user)
+    {
+        $action = $this->request->getParam('action');
+        // The add and tags actions are always allowed to logged in users.
+        if (in_array($action, ['add', 'tags'])) {
+            return true;
+        }
     }
 }
