@@ -13,6 +13,15 @@ use App\Controller\AppController;
 class CustomersController extends AppController
 {
 
+
+    public function isAuthorized($user) {
+        $action = $this->request->getParam('action');
+        // The add action is always allowed to logged in users.
+        if (in_array($action, ['add'])) {
+            return true;
+        }
+    }
+
     /**
      * Index method
      *
