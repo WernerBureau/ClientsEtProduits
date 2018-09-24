@@ -23,6 +23,21 @@ use Cake\Routing\RouteBuilder;
 use Cake\Routing\Router;
 use Cake\Routing\Route\DashedRoute;
 
+
+//Emails
+Router::defaultRouteClass(DashedRoute::class);
+
+Router::scope('/', function (RouteBuilder $routes) {
+    $routes->connect('/email',['controller'=>'Emails','action'=>'index']);
+    $routes->fallbacks('DashedRoute');
+});
+
+/**
+ * Load all plugin routes.  See the Plugin documentation on
+ * how to customize the loading of plugin routes.
+ */
+Plugin::routes();
+
 /**
  * The default class to use for all routes
  *

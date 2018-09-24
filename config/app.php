@@ -382,4 +382,36 @@ return [
     'Session' => [
         'defaults' => 'php',
     ],
+
+    //Emails
+    'EmailTransport' => [
+        'default' => [
+            'className' => 'Mail',
+            // The following keys are used in SMTP transports
+            'host' => 'localhost',
+            'port' => 25,
+            'timeout' => 30,
+            'username' => 'user',
+            'password' => 'secret',
+            'client' => null,
+            'tls' => null,
+            'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
+        ],
+        'gmail' => [
+            'host' => 'ssl://smtp.gmail.com',
+            'port' => 465,
+            'username' => 'werner.burat@gmail.com',
+            'password' => 'ghuttlpyouoiyqui',
+            'className' => 'Smtp'
+        ]
+    ],
+
+    'Email' => [
+        'default' => [
+            'transport' => 'gmail',
+            'from' => 'werner.burat@gmail.com',
+            //'charset' => 'utf-8',
+            //'headerCharset' => 'utf-8',
+        ],
+    ],
 ];
