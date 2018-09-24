@@ -10,6 +10,7 @@ use Cake\Auth\DefaultPasswordHasher;
  * @property int $id
  * @property string $email
  * @property string $password
+ * @property int $role
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  */
@@ -28,6 +29,7 @@ class User extends Entity
     protected $_accessible = [
         'email' => true,
         'password' => true,
+        'role' => true,
         'created' => true,
         'modified' => true
     ];
@@ -41,6 +43,7 @@ class User extends Entity
         'password'
     ];
 
+    // Password hashing
     protected function _setPassword($value) {
         if (strlen($value)) {
             $hasher = new DefaultPasswordHasher();

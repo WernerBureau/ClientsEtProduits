@@ -15,11 +15,17 @@ class CustomersController extends AppController
 
 
     public function isAuthorized($user) {
+
         $action = $this->request->getParam('action');
-        // The add action is always allowed to logged in users.
+
+
+        // The add action is only authorized for role 1 and 2 (super-users)
         if (in_array($action, ['add'])) {
-            return true;
+            if (isset($user['role']) && $user['role'] >= 1) {
+                return true;
+            }
         }
+
     }
 
     /**
