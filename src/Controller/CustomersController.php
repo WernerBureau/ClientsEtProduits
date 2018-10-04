@@ -73,7 +73,12 @@ class CustomersController extends AppController
             }
             $this->Flash->error(__('The customer could not be saved. Please, try again.'));
         }
-        $this->set(compact('customer'));
+
+        $number = $this->Customers->find()->order(['number' => 'DESC'])->first()->get('number') + 1;
+
+        $this->set(compact('customer', 'number'));
+
+
     }
 
     /**

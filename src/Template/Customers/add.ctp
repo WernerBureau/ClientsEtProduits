@@ -19,7 +19,7 @@
     <fieldset>
         <legend><?= __('Add Customer') ?></legend>
         <?php
-            echo $this->Form->control('number');
+            echo $this->Form->hidden('number', ['default' => $number]);
             echo $this->Form->control('name');
             echo $this->Form->control('phone');
             echo $this->Form->control('email');
