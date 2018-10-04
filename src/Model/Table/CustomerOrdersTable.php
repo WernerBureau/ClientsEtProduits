@@ -45,6 +45,12 @@ class CustomerOrdersTable extends Table
             'foreignKey' => 'customer_id',
             'joinType' => 'INNER'
         ]);
+
+        $this->belongsToMany('products', [
+            'foreignKey' => 'order_id',
+            'targetForeignKey' => 'product_id',
+            'joinTable' => 'order_items'
+        ]);
     }
 
     /**

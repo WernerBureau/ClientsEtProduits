@@ -50,6 +50,7 @@ class OrderItemsTable extends Table
             'foreignKey' => 'product_id',
             'joinType' => 'INNER'
         ]);
+
     }
 
     /**
