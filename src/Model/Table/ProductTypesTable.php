@@ -34,7 +34,7 @@ class ProductTypesTable extends Table
         parent::initialize($config);
 
         $this->setTable('product_types');
-        $this->setDisplayField('id');
+        $this->setDisplayField('type');
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');

@@ -16,7 +16,8 @@
         <legend><?= __('Add Customer Order') ?></legend>
         <?php
             echo $this->Form->control('customer_id');
-            echo $this->Form->control('order_date');
+            echo $this->Form->hidden('order_date');
+            echo $this->Form->control('products._ids')
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

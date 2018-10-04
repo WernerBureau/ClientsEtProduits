@@ -42,10 +42,11 @@ class ProductsTable extends Table
 
         $this->addBehavior('Timestamp');
 
-        $this->belongsTo('Types', [
+        $this->belongsTo('product_types', [
             'foreignKey' => 'type_id',
             'joinType' => 'INNER'
         ]);
+
         $this->hasMany('OrderItems', [
             'foreignKey' => 'product_id'
         ]);
@@ -95,7 +96,7 @@ class ProductsTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->existsIn(['type_id'], 'Types'));
+        $rules->add($rules->existsIn(['type_id'], 'product_types'));
 
         return $rules;
     }

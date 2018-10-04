@@ -6,6 +6,7 @@ use App\Controller\AppController;
 /**
  * CustomerOrders Controller
  *
+ * @property \App\Model\Table\CustomerOrdersTable $CustomersOrders
  *
  * @method \App\Model\Entity\CustomerOrder[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
@@ -59,7 +60,9 @@ class CustomerOrdersController extends AppController
             }
             $this->Flash->error(__('The customer order could not be saved. Please, try again.'));
         }
-        $this->set(compact('customerOrder'));
+
+        $customers = $this->CustomerOrders->Customers->find('list');
+        $this->set(compact('customerOrder', 'customers'));
     }
 
     /**
