@@ -18,11 +18,19 @@ class ProductsController extends AppController
 
 
         // The add action is only authorized for role 2 and 3 (super-users)
-        if (in_array($action, ['add'])) {
+        if (in_array($action, ['add', 'edit'])) {
             if (isset($user['role']) && $user['role'] >= 2) {
                 return true;
             }
         }
+
+        // The delete action is only authorized for role 3 (admin)
+        if (in_array($action, ['delete'])) {
+            if (isset($user['role']) && $user['role'] >= 3) {
+                return true;
+            }
+        }
+
 
     }
 
@@ -48,7 +56,7 @@ class ProductsController extends AppController
     public function view($id = null)
     {
         $product = $this->Products->get($id, [
-            'contain' => []
+            'contain' => ['files', 'product_types']
         ]);
 
         $this->set('product', $product);
@@ -75,8 +83,9 @@ class ProductsController extends AppController
         }
 
         $types = $this->Products->Product_Types->find('list');
+        $files = $this->Products->files->find('list');
 
-        $this->set(compact('product', 'types'));
+        $this->set(compact('product', 'types', 'files'));
     }
 
     /**
@@ -89,7 +98,7 @@ class ProductsController extends AppController
     public function edit($id = null)
     {
         $product = $this->Products->get($id, [
-            'contain' => []
+            'contain' => ['product_types', 'files']
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $product = $this->Products->patchEntity($product, $this->request->getData());
@@ -100,7 +109,11 @@ class ProductsController extends AppController
             }
             $this->Flash->error(__('The product could not be saved. Please, try again.'));
         }
-        $this->set(compact('product'));
+
+        $types = $this->Products->Product_Types->find('list');
+        $files = $this->Products->files->find('list');
+
+        $this->set(compact('product', 'types', 'files'));
     }
 
     /**

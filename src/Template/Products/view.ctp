@@ -17,24 +17,37 @@
     <h3><?= h($product->name) ?></h3>
     <table class="vertical-table">
         <tr>
-            <th scope="row"><?= __('Name') ?></th>
-            <td><?= h($product->name) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Description') ?></th>
-            <td><?= h($product->description) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($product->id) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Name') ?></th>
+            <td><?= h($product->name) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Type Id') ?></th>
             <td><?= $this->Number->format($product->type_id) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Description') ?></th>
+            <td><?= h($product->description) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Price') ?></th>
-            <td><?= $this->Number->format($product->price) ?></td>
+            <td><?= $this->Number->format($product->price).' $' ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Image') ?></th>
+            <td>
+                <?php foreach ($product->files as $files): ?>
+                            <?php
+                            echo $this->Html->image($files->path . $files->name, [
+                                "alt" => $files->name,
+                            ]);
+                            ?>
+                <?php endforeach; ?>
+
+            </td>
         </tr>
         <tr>
             <th scope="row"><?= __('Created') ?></th>
