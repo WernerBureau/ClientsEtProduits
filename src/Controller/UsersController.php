@@ -134,6 +134,7 @@ class UsersController extends AppController
             if ($this->Users->save($user)) {
 
                 $this->Flash->success(__('The user has been confirmed.'));
+                $this->Auth->setUser($user);
 
                 return $this->redirect(['action' => 'index']);
             }
