@@ -42,15 +42,21 @@ class ProductsTable extends Table
 
         $this->addBehavior('Timestamp');
 
-        $this->belongsTo('product_types', [
+        $this->belongsTo('Product_types', [
             'foreignKey' => 'type_id',
             'joinType' => 'INNER'
         ]);
 
-        $this->belongsToMany('customer_orders', [
+        $this->belongsToMany('Customer_orders', [
             'foreignKey' => 'product_id',
             'targetForeignKey' => 'order_id',
             'joinTable' => 'order_items'
+        ]);
+
+        $this->belongsToMany('Files', [
+            'foreignKey' => 'product_id',
+            'targetForeignKey' => 'file_id',
+            'joinTable' => 'products_files'
         ]);
     }
 

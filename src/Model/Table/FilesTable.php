@@ -63,16 +63,19 @@ class FilesTable extends Table
         $validator
             ->scalar('name')
             ->maxLength('name', 255)
+            ->requirePresence('name', 'create')
             ->allowEmpty('name');
 
         $validator
             ->scalar('path')
             ->maxLength('path', 255)
+            ->requirePresence('path', 'create')
             ->allowEmpty('path');
 
         $validator
             ->boolean('status')
-            ->allowEmpty('status');
+            ->requirePresence('status', 'create')
+            ->notEmpty('status');
 
         return $validator;
     }
