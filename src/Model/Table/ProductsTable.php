@@ -47,10 +47,6 @@ class ProductsTable extends Table
             'joinType' => 'INNER'
         ]);
 
-        $this->hasMany('OrderItems', [
-            'foreignKey' => 'product_id'
-        ]);
-
         $this->belongsToMany('customer_orders', [
             'foreignKey' => 'product_id',
             'targetForeignKey' => 'order_id',

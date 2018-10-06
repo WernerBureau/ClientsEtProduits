@@ -36,5 +36,9 @@
             <th scope="row"><?= __('Modified') ?></th>
             <td><?= h($customerOrder->modified) ?></td>
         </tr>
+        <tr>
+            <th scope="row"><?= __('Order item test') ?></th>
+            <td><?= h($customerOrder->order_items->total) ?></td>
+        </tr>
     </table>
 </div>

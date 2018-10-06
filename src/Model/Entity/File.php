@@ -4,19 +4,18 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * OrderItem Entity
+ * File Entity
  *
  * @property int $id
- * @property int $order_id
- * @property int $product_id
- * @property int $quantity
+ * @property string $name
+ * @property string $path
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
+ * @property bool $status
  *
- * @property \App\Model\Entity\CustomerOrder $customer_order
- * @property \App\Model\Entity\Product $product
+ * @property \App\Model\Entity\Product[] $products
  */
-class OrderItem extends Entity
+class File extends Entity
 {
 
     /**
@@ -29,13 +28,11 @@ class OrderItem extends Entity
      * @var array
      */
     protected $_accessible = [
-        'order_id' => true,
-        'product_id' => true,
-        'quantity' => true,
+        'name' => true,
+        'path' => true,
         'created' => true,
         'modified' => true,
-        'customer_order' => true,
-        'product' => true,
-        'price' => true
+        'status' => true,
+        'products' => true
     ];
 }

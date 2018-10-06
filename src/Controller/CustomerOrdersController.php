@@ -6,7 +6,7 @@ use App\Controller\AppController;
 /**
  * CustomerOrders Controller
  *
- * @property \App\Model\Table\CustomerOrdersTable $CustomersOrders
+ * @property \App\Model\Table\CustomerOrdersTable $CustomerOrders
  *
  * @method \App\Model\Entity\CustomerOrder[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
@@ -62,7 +62,8 @@ class CustomerOrdersController extends AppController
         }
 
         $customers = $this->CustomerOrders->Customers->find('list');
-        $this->set(compact('customerOrder', 'customers'));
+        $products = $this->CustomerOrders->Products->find('list');
+        $this->set(compact('customerOrder', 'customers', 'products'));
     }
 
     /**
