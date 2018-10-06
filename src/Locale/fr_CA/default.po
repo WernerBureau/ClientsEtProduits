@@ -1,0 +1,619 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2018-10-06 17:34+0000\n"
+"PO-Revision-Date: 2018-10-06 13:52-0400\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.1.1\n"
+"Last-Translator: \n"
+"Language: fr_CA\n"
+
+#: Controller/CustomerOrdersController.php:57
+msgid "The customer order has been saved."
+msgstr "La commande client a été sauvegardée."
+
+#: Controller/CustomerOrdersController.php:61
+msgid "The customer order could not be saved. Please, try again."
+msgstr ""
+"La commande client n'a pas pu être sauvegardée. S'Ll vous plaît, essayez "
+"encore."
+
+#: Controller/CustomerOrdersController.php:88
+msgid "Your article has been updated."
+msgstr "Votre article a été mis à jour."
+
+#: Controller/CustomerOrdersController.php:91
+msgid "Unable to update your article."
+msgstr "Impossible de mettre à jour votre article."
+
+#: Controller/CustomerOrdersController.php:108
+msgid "The customer order has been deleted."
+msgstr "La commande client a été supprimée."
+
+#: Controller/CustomerOrdersController.php:110
+msgid "The customer order could not be deleted. Please, try again."
+msgstr ""
+"La commande client n'a pas pu être supprimée. S'Ll vous plaît, essayez "
+"encore."
+
+#: Controller/CustomersController.php:70;99
+msgid "The customer has been saved."
+msgstr "Le client a été sauvé."
+
+#: Controller/CustomersController.php:74;103
+msgid "The customer could not be saved. Please, try again."
+msgstr ""
+"Le client n'a pas pu être enregistré. S'Ll vous plaît, essayez encore."
+
+#: Controller/CustomersController.php:120
+msgid "The customer has been deleted."
+msgstr "Le client a été supprimé."
+
+#: Controller/CustomersController.php:122
+msgid "The customer could not be deleted. Please, try again."
+msgstr "Le client n'a pas pu être supprimé. S'Ll vous plaît, essayez encore."
+
+#: Controller/FilesController.php:69
+msgid "File has been uploaded and inserted successfully."
+msgstr "Fichier a été téléchargé et inséré avec succès."
+
+#: Controller/FilesController.php:71;74
+msgid "Unable to upload file, please try again."
+msgstr ""
+"Impossible de télécharger le fichier, s'il vous plaît essayer à nouveau."
+
+#: Controller/FilesController.php:77
+msgid "Please choose a file to upload."
+msgstr "Veuillez choisir un fichier à télécharger."
+
+#: Controller/FilesController.php:98
+msgid "The file has been saved."
+msgstr "Le fichier a été sauvegardé."
+
+#: Controller/FilesController.php:102
+msgid "The file could not be saved. Please, try again."
+msgstr ""
+"Le fichier n'a pas pu être enregistré. S'll vous plaît, essayez encore."
+
+#: Controller/FilesController.php:120
+msgid "The file has been deleted."
+msgstr "Le fichier a été supprimé."
+
+#: Controller/FilesController.php:122
+msgid "The file could not be deleted. Please, try again."
+msgstr ""
+"Le fichier n'a pas pu être supprimé. S'll vous plaît, essayez encore."
+
+#: Controller/ProductTypesController.php:68;92
+msgid "The product type has been saved."
+msgstr "Le type de produit a été enregistré."
+
+#: Controller/ProductTypesController.php:72;96
+msgid "The product type could not be saved. Please, try again."
+msgstr ""
+"Le type de produit n'a pas pu être enregistré. S'Ll vous plaît, essayez "
+"encore."
+
+#: Controller/ProductTypesController.php:113
+msgid "The product type has been deleted."
+msgstr "Le type de produit a été supprimé."
+
+#: Controller/ProductTypesController.php:115
+msgid "The product type could not be deleted. Please, try again."
+msgstr ""
+"Le type de produit n'a pas pu être supprimé. S'Ll vous plaît, essayez "
+"encore."
+
+#: Controller/ProductsController.php:78;106
+msgid "The product has been saved."
+msgstr "Le produit a été sauvegardé."
+
+#: Controller/ProductsController.php:82;110
+msgid "The product could not be saved. Please, try again."
+msgstr ""
+"Le produit n'a pas pu être sauvegardé. S'Ll vous plaît, essayez encore."
+
+#: Controller/ProductsController.php:131
+msgid "The product has been deleted."
+msgstr "Le produit a été supprimé."
+
+#: Controller/ProductsController.php:133
+msgid "The product could not be deleted. Please, try again."
+msgstr ""
+"Le produit n'a pas pu être supprimé. S'Ll vous plaît, essayez encore."
+
+#: Controller/UsersController.php:78;102
+msgid "The user has been saved."
+msgstr "L'utilisateur a été enregistré."
+
+#: Controller/UsersController.php:82;106
+msgid "The user could not be saved. Please, try again."
+msgstr "L'utilisateur n'a pas pu être sauvé. Veuillez réessayer."
+
+#: Controller/UsersController.php:123
+msgid "The user has been deleted."
+msgstr "L'utilisateur a été supprimé."
+
+#: Controller/UsersController.php:125
+msgid "The user could not be deleted. Please, try again."
+msgstr ""
+"L'utilisateur n'a pas pu être supprimé. S'll vous plaît, essayez encore."
+
+#: Template/CustomerOrders/add.ctp:9 Template/CustomerOrders/edit.ctp:9
+#: Template/CustomerOrders/index.ctp:9;23 Template/CustomerOrders/view.ctp:9
+#: Template/Customers/add.ctp:9 Template/Customers/edit.ctp:9
+#: Template/Customers/index.ctp:9;29 Template/Customers/view.ctp:9;62;92
+#: Template/Files/add.ctp:9 Template/Files/edit.ctp:9
+#: Template/Files/index.ctp:9;26 Template/Files/view.ctp:9;58
+#: Template/OrderItems/add.ctp:9 Template/OrderItems/edit.ctp:9
+#: Template/OrderItems/index.ctp:9;24 Template/OrderItems/view.ctp:9
+#: Template/ProductTypes/add.ctp:9 Template/ProductTypes/edit.ctp:9
+#: Template/ProductTypes/index.ctp:9;22 Template/ProductTypes/view.ctp:9
+#: Template/Products/add.ctp:9 Template/Products/edit.ctp:9
+#: Template/Products/index.ctp:9;25 Template/Products/view.ctp:9
+#: Template/Users/add.ctp:9 Template/Users/edit.ctp:9
+#: Template/Users/index.ctp:9;23 Template/Users/view.ctp:9
+msgid "Actions"
+msgstr "Actions"
+
+#: Template/CustomerOrders/add.ctp:10 Template/CustomerOrders/edit.ctp:16
+#: Template/CustomerOrders/view.ctp:12 Template/Customers/add.ctp:11
+#: Template/Customers/edit.ctp:17 Template/Customers/index.ctp:11
+#: Template/Customers/view.ctp:14
+#, fuzzy
+msgid "List Customer Orders"
+msgstr "La commande client a été sauvegardée."
+
+#: Template/CustomerOrders/add.ctp:16
+#, fuzzy
+msgid "Add Customer Order"
+msgstr "La commande client a été sauvegardée."
+
+#: Template/CustomerOrders/add.ctp:30 Template/CustomerOrders/edit.ctp:28
+#: Template/Customers/add.ctp:28 Template/Customers/edit.ctp:34
+#: Template/Files/add.ctp:24 Template/Files/edit.ctp:32
+#: Template/OrderItems/add.ctp:23 Template/OrderItems/edit.ctp:29
+#: Template/ProductTypes/add.ctp:21 Template/ProductTypes/edit.ctp:27
+#: Template/Products/add.ctp:25 Template/Products/edit.ctp:31
+#: Template/Users/add.ctp:23 Template/Users/edit.ctp:28
+msgid "Submit"
+msgstr "Soumettre"
+
+#: Template/CustomerOrders/edit.ctp:11 Template/CustomerOrders/index.ctp:37
+#: Template/Customers/edit.ctp:11 Template/Customers/index.ctp:45
+#: Template/Customers/view.ctp:74;105 Template/Files/edit.ctp:11
+#: Template/Files/index.ctp:52 Template/Files/view.ctp:72
+#: Template/OrderItems/edit.ctp:11 Template/OrderItems/index.ctp:39
+#: Template/ProductTypes/edit.ctp:11 Template/ProductTypes/index.ctp:35
+#: Template/Products/edit.ctp:11 Template/Products/index.ctp:41
+#: Template/Users/edit.ctp:11 Template/Users/index.ctp:37
+msgid "Delete"
+msgstr "Supprimer"
+
+#: Template/CustomerOrders/edit.ctp:13 Template/CustomerOrders/index.ctp:37
+#: Template/CustomerOrders/view.ctp:11 Template/Customers/edit.ctp:13
+#: Template/Customers/index.ctp:45 Template/Customers/view.ctp:11;74;105
+#: Template/Files/edit.ctp:13 Template/Files/index.ctp:52
+#: Template/Files/view.ctp:11;72 Template/OrderItems/edit.ctp:13
+#: Template/OrderItems/index.ctp:39 Template/OrderItems/view.ctp:11
+#: Template/ProductTypes/edit.ctp:13 Template/ProductTypes/index.ctp:35
+#: Template/ProductTypes/view.ctp:11 Template/Products/edit.ctp:13
+#: Template/Products/index.ctp:41 Template/Products/view.ctp:11
+#: Template/Users/edit.ctp:13 Template/Users/index.ctp:37
+#: Template/Users/view.ctp:11
+msgid "Are you sure you want to delete # {0}?"
+msgstr "Êtes-vous sûr de vouloir supprimer # {0}?"
+
+#: Template/CustomerOrders/edit.ctp:22 Template/CustomerOrders/view.ctp:10
+#, fuzzy
+msgid "Edit Customer Order"
+msgstr "La commande client a été sauvegardée."
+
+#: Template/CustomerOrders/index.ctp:10 Template/CustomerOrders/view.ctp:13
+#: Template/Customers/add.ctp:12 Template/Customers/edit.ctp:18
+#: Template/Customers/index.ctp:12 Template/Customers/view.ctp:15
+#, fuzzy
+msgid "New Customer Order"
+msgstr "La commande client a été sauvegardée."
+
+#: Template/CustomerOrders/index.ctp:14
+#, fuzzy
+msgid "Customer Orders"
+msgstr "Le client a été sauvé."
+
+#: Template/CustomerOrders/index.ctp:35 Template/Customers/index.ctp:43
+#: Template/Customers/view.ctp:72;103 Template/Files/index.ctp:50
+#: Template/Files/view.ctp:70 Template/OrderItems/index.ctp:37
+#: Template/ProductTypes/index.ctp:33 Template/Products/index.ctp:39
+#: Template/Users/index.ctp:35
+msgid "View"
+msgstr "Voir"
+
+#: Template/CustomerOrders/index.ctp:36 Template/Customers/index.ctp:44
+#: Template/Customers/view.ctp:73;104 Template/Files/index.ctp:51
+#: Template/Files/view.ctp:71 Template/OrderItems/index.ctp:38
+#: Template/ProductTypes/index.ctp:34 Template/Products/index.ctp:40
+#: Template/Users/index.ctp:36
+msgid "Edit"
+msgstr "Modifier"
+
+#: Template/CustomerOrders/index.ctp:45 Template/Customers/index.ctp:53
+#: Template/Files/index.ctp:60 Template/OrderItems/index.ctp:47
+#: Template/ProductTypes/index.ctp:43 Template/Products/index.ctp:49
+#: Template/Users/index.ctp:45
+msgid "first"
+msgstr "Première"
+
+#: Template/CustomerOrders/index.ctp:46 Template/Customers/index.ctp:54
+#: Template/Files/index.ctp:61 Template/OrderItems/index.ctp:48
+#: Template/ProductTypes/index.ctp:44 Template/Products/index.ctp:50
+#: Template/Users/index.ctp:46
+msgid "previous"
+msgstr "précédent"
+
+#: Template/CustomerOrders/index.ctp:48 Template/Customers/index.ctp:56
+#: Template/Files/index.ctp:63 Template/OrderItems/index.ctp:50
+#: Template/ProductTypes/index.ctp:46 Template/Products/index.ctp:52
+#: Template/Users/index.ctp:48
+msgid "next"
+msgstr "suivant"
+
+#: Template/CustomerOrders/index.ctp:49 Template/Customers/index.ctp:57
+#: Template/Files/index.ctp:64 Template/OrderItems/index.ctp:51
+#: Template/ProductTypes/index.ctp:47 Template/Products/index.ctp:53
+#: Template/Users/index.ctp:49
+msgid "last"
+msgstr "Dernière"
+
+#: Template/CustomerOrders/index.ctp:51 Template/Customers/index.ctp:59
+#: Template/Files/index.ctp:66 Template/OrderItems/index.ctp:53
+#: Template/ProductTypes/index.ctp:49 Template/Products/index.ctp:55
+#: Template/Users/index.ctp:51
+msgid ""
+"Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} "
+"total"
+msgstr ""
+"Page {{page}} de {{pages}}, affichage {{Current}} enregistrement (s) sur "
+"{{Count}} total"
+
+#: Template/CustomerOrders/view.ctp:11
+#, fuzzy
+msgid "Delete Customer Order"
+msgstr "La commande client a été sauvegardée."
+
+#: Template/CustomerOrders/view.ctp:20 Template/Customers/view.ctp:40;57;86
+#: Template/Files/view.ctp:30;51 Template/OrderItems/view.ctp:20
+#: Template/ProductTypes/view.ctp:24 Template/Products/view.ctp:20
+#: Template/Users/view.ctp:28
+msgid "Id"
+msgstr "Id"
+
+#: Template/CustomerOrders/view.ctp:24 Template/Customers/view.ctp:58;87
+#, fuzzy
+msgid "Customer Id"
+msgstr "Le client a été sauvé."
+
+#: Template/CustomerOrders/view.ctp:28 Template/Customers/view.ctp:59
+msgid "Order Date"
+msgstr "Date de commande"
+
+#: Template/CustomerOrders/view.ctp:32 Template/Customers/view.ctp:44;60;90
+#: Template/Files/view.ctp:34;56 Template/OrderItems/view.ctp:36
+#: Template/ProductTypes/view.ctp:28 Template/Products/view.ctp:53
+#: Template/Users/view.ctp:32
+msgid "Created"
+msgstr "Créé"
+
+#: Template/CustomerOrders/view.ctp:36 Template/Customers/view.ctp:48;61;91
+#: Template/Files/view.ctp:38;57 Template/OrderItems/view.ctp:40
+#: Template/ProductTypes/view.ctp:32 Template/Products/view.ctp:57
+#: Template/Users/view.ctp:36
+msgid "Modified"
+msgstr "Modifié"
+
+#: Template/CustomerOrders/view.ctp:40
+#, fuzzy
+msgid "Order item test"
+msgstr "La commande client a été sauvegardée."
+
+#: Template/Customers/add.ctp:10 Template/Customers/edit.ctp:16
+#: Template/Customers/view.ctp:12
+msgid "List Customers"
+msgstr "Liste des clients"
+
+#: Template/Customers/add.ctp:13 Template/Customers/edit.ctp:19
+#: Template/Customers/index.ctp:13 Template/Customers/view.ctp:16
+#: Template/Users/add.ctp:10 Template/Users/edit.ctp:16
+#: Template/Users/view.ctp:12
+msgid "List Users"
+msgstr "Liste des utilisateurs"
+
+#: Template/Customers/add.ctp:14 Template/Customers/edit.ctp:20
+#: Template/Customers/index.ctp:14 Template/Customers/view.ctp:17
+#: Template/Users/index.ctp:10 Template/Users/view.ctp:13
+#, fuzzy
+msgid "New User"
+msgstr "L'utilisateur a été enregistré."
+
+#: Template/Customers/add.ctp:20
+#, fuzzy
+msgid "Add Customer"
+msgstr "Le client a été sauvé."
+
+#: Template/Customers/edit.ctp:26 Template/Customers/view.ctp:10
+#, fuzzy
+msgid "Edit Customer"
+msgstr "Le client a été sauvé."
+
+#: Template/Customers/index.ctp:10 Template/Customers/view.ctp:13
+#, fuzzy
+msgid "New Customer"
+msgstr "Le client a été sauvé."
+
+#: Template/Customers/index.ctp:18
+msgid "Customers"
+msgstr "Clients"
+
+#: Template/Customers/view.ctp:11
+#, fuzzy
+msgid "Delete Customer"
+msgstr "Le client a été sauvé."
+
+#: Template/Customers/view.ctp:24
+msgid "Number"
+msgstr "Numéro"
+
+#: Template/Customers/view.ctp:28 Template/Files/view.ctp:22;53
+#: Template/Products/view.ctp:24
+msgid "Name"
+msgstr "Nom"
+
+#: Template/Customers/view.ctp:32
+msgid "Phone"
+msgstr "Téléphone"
+
+#: Template/Customers/view.ctp:36;88 Template/Users/view.ctp:20
+msgid "Email"
+msgstr "Courriel"
+
+#: Template/Customers/view.ctp:53
+#, fuzzy
+msgid "Related Customer Orders"
+msgstr "La commande client a été sauvegardée."
+
+#: Template/Customers/view.ctp:82
+msgid "Related Users"
+msgstr "Utilisateurs associés"
+
+#: Template/Customers/view.ctp:89 Template/Users/view.ctp:24
+msgid "Password"
+msgstr "Mot de passe"
+
+#: Template/Emails/index.ctp:1
+msgid "sent"
+msgstr "Envoyé"
+
+#: Template/Files/add.ctp:10 Template/Files/edit.ctp:16
+#: Template/Files/view.ctp:12
+msgid "List Files"
+msgstr "Liste des fichiers"
+
+#: Template/Files/add.ctp:11 Template/Files/edit.ctp:17
+#: Template/Files/index.ctp:11 Template/Files/view.ctp:14
+#: Template/Products/add.ctp:10 Template/Products/edit.ctp:16
+#: Template/Products/view.ctp:12
+msgid "List Products"
+msgstr "Liste des produits"
+
+#: Template/Files/add.ctp:12 Template/Files/edit.ctp:18
+#: Template/Files/index.ctp:12 Template/Files/view.ctp:15
+#: Template/Products/index.ctp:10 Template/Products/view.ctp:13
+#, fuzzy
+msgid "New Product"
+msgstr "Le produit a été sauvegardé."
+
+#: Template/Files/add.ctp:18
+#, fuzzy
+msgid "Add File"
+msgstr "Le fichier a été sauvegardé."
+
+#: Template/Files/edit.ctp:24 Template/Files/view.ctp:10
+#, fuzzy
+msgid "Edit File"
+msgstr "Le fichier a été sauvegardé."
+
+#: Template/Files/index.ctp:10 Template/Files/view.ctp:13
+#, fuzzy
+msgid "New File"
+msgstr "Le fichier a été sauvegardé."
+
+#: Template/Files/index.ctp:16
+msgid "Files"
+msgstr "Fichiers"
+
+#: Template/Files/index.ctp:22
+msgid "Preview"
+msgstr "Aperçu"
+
+#: Template/Files/view.ctp:11
+#, fuzzy
+msgid "Delete File"
+msgstr "Le fichier a été sauvegardé."
+
+#: Template/Files/view.ctp:26
+msgid "Path"
+msgstr "Chemin"
+
+#: Template/Files/view.ctp:42
+msgid "Status"
+msgstr "État"
+
+#: Template/Files/view.ctp:43
+msgid "Yes"
+msgstr "Oui"
+
+#: Template/Files/view.ctp:43
+msgid "No"
+msgstr "Non"
+
+#: Template/Files/view.ctp:47
+msgid "Related Products"
+msgstr "Produits similaires"
+
+#: Template/Files/view.ctp:52 Template/Products/view.ctp:28
+msgid "Type Id"
+msgstr "ID de type"
+
+#: Template/Files/view.ctp:54 Template/Products/view.ctp:36
+msgid "Price"
+msgstr "Prix"
+
+#: Template/Files/view.ctp:55 Template/Products/view.ctp:32
+msgid "Description"
+msgstr "Description"
+
+#: Template/Layout/error.ctp:35
+msgid "Error"
+msgstr "Erreur"
+
+#: Template/Layout/error.ctp:43
+msgid "Back"
+msgstr "Retour"
+
+#: Template/OrderItems/add.ctp:10 Template/OrderItems/edit.ctp:16
+#: Template/OrderItems/view.ctp:12
+#, fuzzy
+msgid "List Order Items"
+msgstr "La commande client a été sauvegardée."
+
+#: Template/OrderItems/add.ctp:16
+#, fuzzy
+msgid "Add Order Item"
+msgstr "La commande client a été sauvegardée."
+
+#: Template/OrderItems/edit.ctp:22 Template/OrderItems/view.ctp:10
+#, fuzzy
+msgid "Edit Order Item"
+msgstr "La commande client a été sauvegardée."
+
+#: Template/OrderItems/index.ctp:10 Template/OrderItems/view.ctp:13
+#, fuzzy
+msgid "New Order Item"
+msgstr "La commande client a été sauvegardée."
+
+#: Template/OrderItems/index.ctp:14
+msgid "Order Items"
+msgstr "Items de commande"
+
+#: Template/OrderItems/view.ctp:11
+#, fuzzy
+msgid "Delete Order Item"
+msgstr "La commande client a été sauvegardée."
+
+#: Template/OrderItems/view.ctp:24
+msgid "Order Id"
+msgstr "Identifiant de commande"
+
+#: Template/OrderItems/view.ctp:28
+#, fuzzy
+msgid "Product Id"
+msgstr "Le produit a été sauvegardé."
+
+#: Template/OrderItems/view.ctp:32
+msgid "Quantity"
+msgstr "Quantité"
+
+#: Template/ProductTypes/add.ctp:10 Template/ProductTypes/edit.ctp:16
+#: Template/ProductTypes/view.ctp:12
+#, fuzzy
+msgid "List Product Types"
+msgstr "Le type de produit a été enregistré."
+
+#: Template/ProductTypes/add.ctp:16
+#, fuzzy
+msgid "Add Product Type"
+msgstr "Le type de produit a été enregistré."
+
+#: Template/ProductTypes/edit.ctp:22 Template/ProductTypes/view.ctp:10
+#, fuzzy
+msgid "Edit Product Type"
+msgstr "Le type de produit a été enregistré."
+
+#: Template/ProductTypes/index.ctp:10 Template/ProductTypes/view.ctp:13
+#, fuzzy
+msgid "New Product Type"
+msgstr "Le type de produit a été enregistré."
+
+#: Template/ProductTypes/index.ctp:14
+#, fuzzy
+msgid "Product Types"
+msgstr "Le produit a été sauvegardé."
+
+#: Template/ProductTypes/view.ctp:11
+#, fuzzy
+msgid "Delete Product Type"
+msgstr "Le type de produit a été enregistré."
+
+#: Template/ProductTypes/view.ctp:20
+#, fuzzy
+msgid "Type"
+msgstr ""
+"Le type de produit n'a pas pu être enregistré. S'Ll vous plaît, essayez "
+"encore."
+
+#: Template/Products/add.ctp:16
+#, fuzzy
+msgid "Add Product"
+msgstr "Le produit a été sauvegardé."
+
+#: Template/Products/edit.ctp:22 Template/Products/view.ctp:10
+#, fuzzy
+msgid "Edit Product"
+msgstr "Le produit a été sauvegardé."
+
+#: Template/Products/index.ctp:14
+msgid "Products"
+msgstr "Produits"
+
+#: Template/Products/view.ctp:11
+#, fuzzy
+msgid "Delete Product"
+msgstr "Le produit a été sauvegardé."
+
+#: Template/Products/view.ctp:40
+msgid "Image"
+msgstr "Image"
+
+#: Template/Users/add.ctp:16
+#, fuzzy
+msgid "Add User"
+msgstr "L'utilisateur a été enregistré."
+
+#: Template/Users/edit.ctp:22 Template/Users/view.ctp:10
+#, fuzzy
+msgid "Edit User"
+msgstr "L'utilisateur a été enregistré."
+
+#: Template/Users/index.ctp:14
+msgid "Users"
+msgstr "Utilisateurs"
+
+#: Template/Users/login.ctp:10
+msgid "Please enter your email and password"
+msgstr "Veuillez entrer votre email et mot de passe"
+
+#: Template/Users/login.ctp:14
+msgid "Login"
+msgstr "Connexion"
+
+#: Template/Users/view.ctp:11
+#, fuzzy
+msgid "Delete User"
+msgstr "L'utilisateur a été enregistré."

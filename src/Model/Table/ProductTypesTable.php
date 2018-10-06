@@ -33,6 +33,8 @@ class ProductTypesTable extends Table
     {
         parent::initialize($config);
 
+        $this->addBehavior('Translate', ['fields' => ['type']]);
+
         $this->setTable('product_types');
         $this->setDisplayField('type');
         $this->setPrimaryKey('id');

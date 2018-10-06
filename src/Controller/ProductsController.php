@@ -12,6 +12,10 @@ use App\Controller\AppController;
 class ProductsController extends AppController
 {
 
+    public function initialize() {
+        parent::initialize();
+    }
+
     public function isAuthorized($user) {
 
         $action = $this->request->getParam('action');

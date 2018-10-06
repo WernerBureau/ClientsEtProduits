@@ -36,6 +36,8 @@ class ProductsTable extends Table
     {
         parent::initialize($config);
 
+        $this->addBehavior('Translate', ['fields' => ['name', 'description']]);
+
         $this->setTable('products');
         $this->setDisplayField('name');
         $this->setPrimaryKey('id');
