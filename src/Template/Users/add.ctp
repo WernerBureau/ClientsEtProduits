@@ -18,6 +18,7 @@
             echo $this->Form->control('email');
             echo $this->Form->control('password');
             echo $this->Form->hidden('role', ['default' => '0']);
+            echo $this->Form->hidden('uuid', ['default' => $uuid]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

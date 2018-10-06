@@ -3,7 +3,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Mailer\Email;
-
+use Cake\Utility\Text;
 /**
  * Users Controller
  *
@@ -13,6 +13,15 @@ use Cake\Mailer\Email;
  */
 class UsersController extends AppController
 {
+
+    public function isAuthorized($user) {
+
+        $action = $this->request->getParam('action');
+
+        if (in_array($action, ['confirmation'])) {
+            return true;
+        }
+    }
 
     public function initialize() {
         parent::initialize();
@@ -77,11 +86,15 @@ class UsersController extends AppController
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                $emailaddress = $user->get('email');
+                $uuidparam = $user->get('uuid');
+                return $this->redirect(['controller' => 'emails', 'action' => 'index', '?'=>['email'=>$emailaddress, 'uuid'=>$uuidparam]]);
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
-        $this->set(compact('user'));
+
+        $uuid = Text::uuid();
+        $this->set(compact('user', 'uuid'));
     }
 
     /**
@@ -107,6 +120,29 @@ class UsersController extends AppController
         }
         $this->set(compact('user'));
     }
+
+    public function confirmation()
+    {
+        $uuidparam = $this->request->getQuery('uuid');
+
+        $user = $this->Users->findByUuid($uuidparam)->first();
+
+
+        $user = $this->Users->patchEntity($user, $this->request->getData());
+        $user->role = 2;
+
+            if ($this->Users->save($user)) {
+
+                $this->Flash->success(__('The user has been confirmed.'));
+
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+
+
+        $this -> autoRender = false;
+    }
+
 
     /**
      * Delete method
