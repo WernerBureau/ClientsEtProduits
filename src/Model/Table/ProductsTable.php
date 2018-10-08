@@ -50,8 +50,7 @@ class ProductsTable extends Table
         ]);
 
         $this->hasMany('Order_items', [
-            'foreignKey' => 'product_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'product_id'
         ]);
 
 

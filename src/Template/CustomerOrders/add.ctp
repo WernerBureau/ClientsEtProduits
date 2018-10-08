@@ -16,12 +16,7 @@
         <legend><?= __('Add Customer Order') ?></legend>
         <?php
             echo $this->Form->control('customer_id');
-            echo $this->Form->control('products._ids', [
-                    'options' => $products,
-                    'id' => 'magicselect',
-                    'type' => 'select',
-                    'multiple' => 'list'
-            ]);
+            echo $this->Form->control('products._ids');
             echo $this->Form->control('order_items.quantity');
         ?>
     </fieldset>

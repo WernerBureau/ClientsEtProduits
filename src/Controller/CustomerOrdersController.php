@@ -13,6 +13,27 @@ use App\Controller\AppController;
 class CustomerOrdersController extends AppController
 {
 
+    public function isAuthorized($user) {
+
+        $action = $this->request->getParam('action');
+
+
+        // The add action is only authorized for role 2 and 3 (super-users)
+        if (in_array($action, ['add', 'edit'])) {
+            if (isset($user['role']) && $user['role'] >= 2) {
+                return true;
+            }
+        }
+
+        // The delete action is only authorized for role 3 (admin)
+        if (in_array($action, ['delete'])) {
+            if (isset($user['role']) && $user['role'] >= 3) {
+                return true;
+            }
+        }
+    }
+
+
     /**
      * Index method
      *
@@ -35,7 +56,7 @@ class CustomerOrdersController extends AppController
     public function view($id = null)
     {
         $customerOrder = $this->CustomerOrders->get($id, [
-            'contain' => ['products']
+            'contain' => ['order_items']
         ]);
 
         $this->set('customerOrder', $customerOrder);
@@ -54,6 +75,14 @@ class CustomerOrdersController extends AppController
 
             $customerOrder->user_id = $this->Auth->user('id');
             if ($this->CustomerOrders->save($customerOrder)) {
+
+                $orderItem = $this->CustomerOrders->Order_items->newEntity();
+                $orderItem->order_id = $customerOrder->get('id');
+                $orderItem->product_id = $this->request->getData('products._ids.0');
+                $orderItem->quantity = $this->request->getData('order_items.quantity');
+                $orderItem->total = $this->CustomerOrders->Order_Items->Products->findById($orderItem->product_id)->first()->get('price') * $orderItem->quantity;
+
+                $this->CustomerOrders->Order_items->save($orderItem);
                 $this->Flash->success(__('The customer order has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
@@ -62,7 +91,7 @@ class CustomerOrdersController extends AppController
         }
 
         $customers = $this->CustomerOrders->Customers->find('list');
-        $products = $this->CustomerOrders->Products->find('list');
+        $products = $this->CustomerOrders->Order_Items->Products->find('list');
         $this->set(compact('customerOrder', 'customers', 'products'));
     }
 
@@ -111,14 +140,5 @@ class CustomerOrdersController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
-    }
-
-    public function isAuthorized($user)
-    {
-        $action = $this->request->getParam('action');
-        // The add and tags actions are always allowed to logged in users.
-        if (in_array($action, ['add', 'tags'])) {
-            return true;
-        }
     }
 }

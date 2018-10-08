@@ -2656,3 +2656,145 @@ Stack Trace:
 #39 {main}
 
 
+2018-10-08 14:25:28 Error: [InvalidArgumentException] The products association is not defined on CustomerOrders.
+Request URL: /customer-orders/view/5
+Referer URL: http://localhost/ClientsEtProduits/customer-orders?sort=id&direction=asc
+Stack Trace:
+#0 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(539): Cake\ORM\Table->getAssociation('products')
+#1 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(365): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\CustomerOrdersTable), 'products', Array, Array)
+#2 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(495): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\CustomerOrdersTable))
+#3 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(466): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\CustomerOrdersTable))
+#4 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\ORM\Query.php(1157): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\CustomerOrdersTable), true)
+#5 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\ORM\Query.php(1106): Cake\ORM\Query->_transformQuery()
+#6 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Database\Driver\Sqlite.php(107): Cake\ORM\Query->sql()
+#7 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Database\Connection.php(275): Cake\Database\Driver\Sqlite->prepare(Object(Cake\ORM\Query))
+#8 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#9 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Database\Connection.php(282): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#10 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Database\Connection.php(332): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#11 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#12 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Database\Connection.php(337): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#13 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Database\Query.php(219): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#14 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\ORM\Query.php(1127): Cake\Database\Query->execute()
+#15 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(309): Cake\ORM\Query->_execute()
+#16 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\ORM\Query.php(1074): Cake\ORM\Query->_all()
+#17 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(471): Cake\ORM\Query->all()
+#18 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(482): Cake\ORM\Query->first()
+#19 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\ORM\Table.php(1613): Cake\ORM\Query->firstOrFail()
+#20 E:\Programs\Ampps\www\ClientsEtProduits\src\Controller\CustomerOrdersController.php(38): Cake\ORM\Table->get(Array, Array)
+#21 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\CustomerOrdersController->view('5')
+#22 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#23 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\CustomerOrdersController))
+#24 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#32 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#33 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#34 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#35 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#36 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#37 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 E:\Programs\Ampps\www\ClientsEtProduits\webroot\index.php(40): Cake\Http\Server->run()
+#39 {main}
+
+
+2018-10-08 14:26:19 Error: [InvalidArgumentException] The products association is not defined on CustomerOrders.
+Request URL: /customer-orders/view/5
+Stack Trace:
+#0 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(539): Cake\ORM\Table->getAssociation('products')
+#1 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(365): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\CustomerOrdersTable), 'products', Array, Array)
+#2 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(495): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\CustomerOrdersTable))
+#3 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(466): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\CustomerOrdersTable))
+#4 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\ORM\Query.php(1157): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\CustomerOrdersTable), true)
+#5 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\ORM\Query.php(1106): Cake\ORM\Query->_transformQuery()
+#6 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Database\Driver\Sqlite.php(107): Cake\ORM\Query->sql()
+#7 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Database\Connection.php(275): Cake\Database\Driver\Sqlite->prepare(Object(Cake\ORM\Query))
+#8 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#9 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Database\Connection.php(282): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#10 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Database\Connection.php(332): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#11 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#12 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Database\Connection.php(337): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#13 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Database\Query.php(219): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#14 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\ORM\Query.php(1127): Cake\Database\Query->execute()
+#15 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(309): Cake\ORM\Query->_execute()
+#16 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\ORM\Query.php(1074): Cake\ORM\Query->_all()
+#17 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(471): Cake\ORM\Query->all()
+#18 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(482): Cake\ORM\Query->first()
+#19 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\ORM\Table.php(1613): Cake\ORM\Query->firstOrFail()
+#20 E:\Programs\Ampps\www\ClientsEtProduits\src\Controller\CustomerOrdersController.php(38): Cake\ORM\Table->get(Array, Array)
+#21 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\CustomerOrdersController->view('5')
+#22 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#23 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\CustomerOrdersController))
+#24 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#32 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#33 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#34 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#35 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#36 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#37 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 E:\Programs\Ampps\www\ClientsEtProduits\webroot\index.php(40): Cake\Http\Server->run()
+#39 {main}
+
+
+2018-10-08 14:27:01 Error: [RuntimeException] Table "App\Model\Table\CustomerOrdersTable" is not associated with "Products"
+Request URL: /customer-orders/add
+Referer URL: http://localhost/ClientsEtProduits/customer-orders/
+Stack Trace:
+#0 E:\Programs\Ampps\www\ClientsEtProduits\src\Controller\CustomerOrdersController.php(65): Cake\ORM\Table->__get('Products')
+#1 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\CustomerOrdersController->add()
+#2 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#3 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\CustomerOrdersController))
+#4 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 E:\Programs\Ampps\www\ClientsEtProduits\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+
+
+2018-10-08 14:27:24 Error: [RuntimeException] Table "App\Model\Table\CustomerOrdersTable" is not associated with "OrderItems"
+Request URL: /customer-orders/add
+Stack Trace:
+#0 E:\Programs\Ampps\www\ClientsEtProduits\src\Controller\CustomerOrdersController.php(65): Cake\ORM\Table->__get('OrderItems')
+#1 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\CustomerOrdersController->add()
+#2 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#3 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\CustomerOrdersController))
+#4 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 E:\Programs\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 E:\Programs\Ampps\www\ClientsEtProduits\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+
+
