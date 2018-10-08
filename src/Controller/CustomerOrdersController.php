@@ -35,7 +35,7 @@ class CustomerOrdersController extends AppController
     public function view($id = null)
     {
         $customerOrder = $this->CustomerOrders->get($id, [
-            'contain' => []
+            'contain' => ['products']
         ]);
 
         $this->set('customerOrder', $customerOrder);

@@ -4,17 +4,18 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * CustomerOrder Entity
+ * OrderItem Entity
  *
  * @property int $id
- * @property int $customer_id
- * @property \Cake\I18n\FrozenTime $order_date
- * @property \Cake\I18n\FrozenTime $created
- * @property \Cake\I18n\FrozenTime $modified
+ * @property int $order_id
+ * @property int $product_id
+ * @property int $quantity
+ * @property float $total
  *
- * @property \App\Model\Entity\Customer $customer
+ * @property \App\Model\Entity\CustomerOrder $customer_order
+ * @property \App\Model\Entity\Product $product
  */
-class CustomerOrder extends Entity
+class OrderItem extends Entity
 {
 
     /**
@@ -27,11 +28,11 @@ class CustomerOrder extends Entity
      * @var array
      */
     protected $_accessible = [
-        'customer_id' => true,
-        'created' => true,
-        'modified' => true,
-        'customer' => true,
-        'products' => true,
-        'order_items' => true
+        'order_id' => true,
+        'product_id' => true,
+        'quantity' => true,
+        'total' => true,
+        'customer_order' => true,
+        'product' => true
     ];
 }

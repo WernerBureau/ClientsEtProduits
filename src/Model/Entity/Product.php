@@ -37,7 +37,8 @@ class Product extends Entity
         'created' => true,
         'modified' => true,
         'type' => true,
-        'order_items' => true,
-        'files' => true
+        'customer_orders' => true,
+        'files' => true,
+        'order_items' => true
     ];
 }

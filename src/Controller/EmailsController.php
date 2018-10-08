@@ -11,7 +11,7 @@ class EmailsController extends AppController{
 
         $confirmationlink = "http://". $_SERVER['HTTP_HOST'].$this->request->webroot."Users/confirmation?uuid=".$uuid;
 
-        $email->to($emailaddress)->subject('Essai de CakePHP Mailer')->send(
+        $email->to($emailaddress)->subject('Confirmation - TP1 Werner Burat')->send(
             'Your confirmation link is: ' . $confirmationlink);
     }
 }

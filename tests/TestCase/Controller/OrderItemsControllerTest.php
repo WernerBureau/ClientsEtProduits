@@ -16,7 +16,9 @@ class OrderItemsControllerTest extends IntegrationTestCase
      * @var array
      */
     public $fixtures = [
-        'app.order_items'
+        'app.order_items',
+        'app.customer_orders',
+        'app.products'
     ];
 
     /**

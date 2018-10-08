@@ -46,10 +46,9 @@ class CustomerOrdersTable extends Table
             'joinType' => 'INNER'
         ]);
 
-        $this->belongsToMany('products', [
+        $this->hasMany('Order_items', [
             'foreignKey' => 'order_id',
-            'targetForeignKey' => 'product_id',
-            'joinTable' => 'order_items'
+            'joinType' => 'INNER'
         ]);
     }
 
@@ -65,10 +64,7 @@ class CustomerOrdersTable extends Table
             ->integer('id')
             ->allowEmpty('id', 'create');
 
-        $validator
-            ->dateTime('order_date')
-            ->requirePresence('order_date', 'create')
-            ->notEmpty('order_date');
+
 
         return $validator;
     }
