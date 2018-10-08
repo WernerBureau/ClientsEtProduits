@@ -51,6 +51,15 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             $loguser = $this->request->session()->read('Auth.User');
              if ($loguser) {
                 $user = $loguser['email'];
+                $role = $loguser['role'];
+                $emailaddress = $loguser['email'];
+                $uuidparam = $loguser['uuid'];
+
+                if ($role === 1){
+                    echo '<li>';
+                    echo $this->Html->link('Please validate your account. Click to resend confirmation email.', ['controller' => 'emails', 'action' => 'index', '?'=>['email'=>$emailaddress, 'uuid'=>$uuidparam]]);
+                    echo '</li>';
+                }
 
                 echo '<li>';
                 echo $this->Html->link($user . ' logout', ['controller' => 'Users', 'action' => 'logout']);

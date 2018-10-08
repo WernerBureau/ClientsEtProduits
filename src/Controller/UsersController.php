@@ -34,6 +34,12 @@ class UsersController extends AppController
             $user = $this->Auth->identify();
             if ($user) {
                 $this->Auth->setUser($user);
+                if ($user['role'] === 1){
+                    $this->Flash->success('Please activate your account. Restrictions: Can\'t add or edit anything on this website.');
+                } else {
+                    $this->Flash->success('You are now logged in.');
+                }
+
                 return $this->redirect($this->Auth->redirectUrl());
             }
             $this->Flash->error('Your email or password is incorrect.');
