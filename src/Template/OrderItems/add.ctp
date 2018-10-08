@@ -17,9 +17,9 @@
 <div class="orderItems form large-9 medium-8 columns content">
     <?= $this->Form->create($orderItem) ?>
     <fieldset>
-        <legend><?= __('Add Order Item') ?></legend>
+        <legend><?= __('Add item in order') ?></legend>
         <?php
-            echo $this->Form->control('order_id', ['options' => $customerOrders, 'empty' => true]);
+            echo $this->Form->hidden('order_id', ['options' => $customerOrders, 'empty' => true]);
             echo $this->Form->control('product_id', ['options' => $products, 'empty' => true]);
             echo $this->Form->control('quantity');
             echo $this->Form->control('total');

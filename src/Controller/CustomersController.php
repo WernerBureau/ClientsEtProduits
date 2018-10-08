@@ -18,14 +18,33 @@ class CustomersController extends AppController
 
         $action = $this->request->getParam('action');
 
-
-        // The add action is only authorized for role 1 and 2 (super-users)
-        if (in_array($action, ['add'])) {
+        // The view action is only authorized for role 1, 2 and 3 (confirmed users)
+        if (in_array($action, ['view'])) {
             if (isset($user['role']) && $user['role'] >= 1) {
                 return true;
             }
         }
 
+        // The add action is only authorized for role 2 and 3 (super-users)
+        if (in_array($action, ['add'])) {
+            if (isset($user['role']) && $user['role'] >= 2) {
+                return true;
+            }
+        }
+
+        // The edit action is only authorized for role 2 and 3 (super-users)
+        if (in_array($action, ['edit'])) {
+            if (isset($user['role']) && $user['role'] >= 2) {
+                return true;
+            }
+        }
+
+        // The delete action is only authorized for role 3 (admins)
+        if (in_array($action, ['delete'])) {
+            if (isset($user['role']) && $user['role'] >= 3) {
+                return true;
+            }
+        }
     }
 
     /**
@@ -50,7 +69,7 @@ class CustomersController extends AppController
     public function view($id = null)
     {
         $customer = $this->Customers->get($id, [
-            'contain' => ['CustomerOrders', 'Users']
+            'contain' => ['CustomerOrders']
         ]);
 
         $this->set('customer', $customer);

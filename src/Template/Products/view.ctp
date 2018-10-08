@@ -16,17 +16,19 @@
 <div class="products view large-9 medium-8 columns content">
     <h3><?= h($product->name) ?></h3>
     <table class="vertical-table">
+        <?php if ($this->request->getSession()->read('Auth.User.role') >= 3) { ?>
         <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($product->id) ?></td>
         </tr>
+        <?php } ?>
         <tr>
             <th scope="row"><?= __('Name') ?></th>
             <td><?= h($product->name) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Type Id') ?></th>
-            <td><?= $this->Number->format($product->type_id) ?></td>
+            <th scope="row"><?= __('Type') ?></th>
+            <td><?= h($product->Product_types['type']) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Description') ?></th>

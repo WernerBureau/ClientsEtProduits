@@ -104,11 +104,12 @@ class CustomerOrdersController extends AppController
      * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function edit($customerId)
+    public function edit($id = null)
     {
-        $customerOrder = $this->CustomerOrders
-            ->findByCustomer_id($customerId)
-            ->firstOrFail();
+        $customerOrder = $this->CustomerOrders->get($id, [
+            'contain' => ['order_items', 'products', 'customers']
+        ]);
+
 
         if ($this->request->is(['post', 'put'])) {
             $this->CustomerOrders->patchEntity($customerOrder, $this->request->getData(), [
@@ -116,12 +117,18 @@ class CustomerOrdersController extends AppController
                 'accessibleFields' => ['user_id' => false]
             ]);
             if ($this->CustomerOrders->save($customerOrder)) {
-                $this->Flash->success(__('Your article has been updated.'));
+                $this->Flash->success(__('Your customer order has been updated.'));
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('Unable to update your article.'));
+            $this->Flash->error(__('Unable to update your customer order.'));
         }
-        $this->set('article', $customerOrder);
+
+        $customers = $this->CustomerOrders->Customers->find('list');
+        $this->set('customerOrder', $customerOrder);
+        $this->set('customers', $customers);
+
+        $products = $this->CustomerOrders->Order_Items->Products->find('list');
+        $this->set('products', $products);
     }
 
     /**

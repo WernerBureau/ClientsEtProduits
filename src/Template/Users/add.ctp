@@ -6,8 +6,7 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?></li>
+        
     </ul>
 </nav>
 <div class="users form large-9 medium-8 columns content">
@@ -17,7 +16,7 @@
         <?php
             echo $this->Form->control('email');
             echo $this->Form->control('password');
-            echo $this->Form->hidden('role', ['default' => '0']);
+            echo $this->Form->hidden('role', ['default' => '1']);
             echo $this->Form->hidden('uuid', ['default' => $uuid]);
         ?>
     </fieldset>

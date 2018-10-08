@@ -20,6 +20,12 @@
 <div class="customers view large-9 medium-8 columns content">
     <h3><?= h($customer->name) ?></h3>
     <table class="vertical-table">
+        <?php if ($this->request->getSession()->read('Auth.User.role') >= 3) { ?>
+        <tr>
+            <th scope="row"><?= __('Id') ?></th>
+            <td><?= $this->Number->format($customer->id) ?></td>
+        </tr>
+        <?php } ?>
         <tr>
             <th scope="row"><?= __('Number') ?></th>
             <td><?= h($customer->number) ?></td>
@@ -37,10 +43,6 @@
             <td><?= h($customer->email) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($customer->id) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Created') ?></th>
             <td><?= h($customer->created) ?></td>
         </tr>
@@ -54,55 +56,25 @@
         <?php if (!empty($customer->customer_orders)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
-                <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('Customer Id') ?></th>
-                <th scope="col"><?= __('Order Date') ?></th>
-                <th scope="col"><?= __('Created') ?></th>
+                <?php if ($this->request->getSession()->read('Auth.User.role') >= 3) { ?>
+                    <th scope="col"><?= __('Id') ?></th>
+                <?php } ?>
+
+                <th scope="col"><?= __('Order date') ?></th>
                 <th scope="col"><?= __('Modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($customer->customer_orders as $customerOrders): ?>
             <tr>
-                <td><?= h($customerOrders->id) ?></td>
-                <td><?= h($customerOrders->customer_id) ?></td>
-                <td><?= h($customerOrders->order_date) ?></td>
+                <?php if ($this->request->getSession()->read('Auth.User.role') >= 3) { ?>
+                    <td><?= h($customerOrders->id) ?></td>
+                <?php } ?>
                 <td><?= h($customerOrders->created) ?></td>
                 <td><?= h($customerOrders->modified) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'CustomerOrders', 'action' => 'view', $customerOrders->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'CustomerOrders', 'action' => 'edit', $customerOrders->id]) ?>
                     <?= $this->Form->postLink(__('Delete'), ['controller' => 'CustomerOrders', 'action' => 'delete', $customerOrders->id], ['confirm' => __('Are you sure you want to delete # {0}?', $customerOrders->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </table>
-        <?php endif; ?>
-    </div>
-    <div class="related">
-        <h4><?= __('Related Users') ?></h4>
-        <?php if (!empty($customer->users)): ?>
-        <table cellpadding="0" cellspacing="0">
-            <tr>
-                <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('Customer Id') ?></th>
-                <th scope="col"><?= __('Email') ?></th>
-                <th scope="col"><?= __('Password') ?></th>
-                <th scope="col"><?= __('Created') ?></th>
-                <th scope="col"><?= __('Modified') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
-            <?php foreach ($customer->users as $users): ?>
-            <tr>
-                <td><?= h($users->id) ?></td>
-                <td><?= h($users->customer_id) ?></td>
-                <td><?= h($users->email) ?></td>
-                <td><?= h($users->password) ?></td>
-                <td><?= h($users->created) ?></td>
-                <td><?= h($users->modified) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Users', 'action' => 'view', $users->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Users', 'action' => 'edit', $users->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Users', 'action' => 'delete', $users->id], ['confirm' => __('Are you sure you want to delete # {0}?', $users->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

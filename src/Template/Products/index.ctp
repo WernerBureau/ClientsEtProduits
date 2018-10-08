@@ -8,6 +8,13 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Product'), ['action' => 'add']) ?></li>
+        <li><hr/></li>
+        <li><?= $this->Html->link(__('List Product Types'), ['controller' => 'ProductTypes', 'action' => 'index']) ?></li>
+        <li><hr/></li>
+        <li><?= $this->Html->link(__('List Customers'), ['controller' => 'Customers', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Customer Orders'), ['controller' => 'CustomerOrders', 'action' => 'index']) ?></li>
+        <li><hr/></li>
+        <li><?= $this->Html->link(__('Add Files'), ['controller' => 'Files', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="products index large-9 medium-8 columns content">
@@ -15,8 +22,9 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
+                <?php if ($this->request->getSession()->read('Auth.User.role') >= 3) { ?>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('type_id') ?></th>
+                <?php } ?>
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('price') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('description') ?></th>
@@ -28,8 +36,9 @@
         <tbody>
             <?php foreach ($products as $product): ?>
             <tr>
+                <?php if ($this->request->getSession()->read('Auth.User.role') >= 3) { ?>
                 <td><?= $this->Number->format($product->id) ?></td>
-                <td><?= $this->Number->format($product->type_id) ?></td>
+                <?php } ?>
                 <td><?= h($product->name) ?></td>
                 <td><?= $this->Number->format($product->price) ?></td>
                 <td><?= h($product->description) ?></td>
@@ -37,8 +46,12 @@
                 <td><?= h($product->modified) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $product->id]) ?>
+                    <?php if ($this->request->getSession()->read('Auth.User.role') >= 2){ ?>
+                    <?php } ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $product->id]) ?>
+                    <?php if ($this->request->getSession()->read('Auth.User.role') >= 3){ ?>
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $product->id], ['confirm' => __('Are you sure you want to delete # {0}?', $product->id)]) ?>
+                    <?php } ?>
                 </td>
             </tr>
             <?php endforeach; ?>

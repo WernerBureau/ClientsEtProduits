@@ -8,6 +8,13 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Product Type'), ['action' => 'add']) ?></li>
+        <li><hr/></li>
+        <li><?= $this->Html->link(__('List Products'), ['controller' => 'Products', 'action' => 'add']) ?></li>
+        <li><hr/></li>
+        <li><?= $this->Html->link(__('List Customers'), ['controller' => 'Customers', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Customer Orders'), ['controller' => 'CustomerOrders', 'action' => 'index']) ?></li>
+        <li><hr/></li>
+        <li><?= $this->Html->link(__('Add Files'), ['controller' => 'Files', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="productTypes index large-9 medium-8 columns content">
@@ -15,7 +22,9 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
+                <?php if ($this->request->getSession()->read('Auth.User.role') >= 3) { ?>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <?php } ?>
                 <th scope="col"><?= $this->Paginator->sort('type') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
@@ -25,7 +34,9 @@
         <tbody>
             <?php foreach ($productTypes as $productType): ?>
             <tr>
+                <?php if ($this->request->getSession()->read('Auth.User.role') >= 3) { ?>
                 <td><?= $this->Number->format($productType->id) ?></td>
+                <?php } ?>
                 <td><?= h($productType->type) ?></td>
                 <td><?= h($productType->created) ?></td>
                 <td><?= h($productType->modified) ?></td>

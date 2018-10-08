@@ -15,9 +15,26 @@ class FilesController extends AppController
 
     public function isAuthorized($user) {
         $action = $this->request->getParam('action');
-        // The edit and delete actions are allowed to logged in users for comments.
-        if (in_array($action, ['add', 'edit', 'delete'])) {
-            return true;
+
+        // The add action is only authorized for role 2 and 3 (super-users)
+        if (in_array($action, ['add'])) {
+            if (isset($user['role']) && $user['role'] >= 2) {
+                return true;
+            }
+        }
+
+        // The edit action is only authorized for role 2 and 3 (super-users)
+        if (in_array($action, ['edit'])) {
+            if (isset($user['role']) && $user['role'] >= 2) {
+                return true;
+            }
+        }
+
+        // The delete action is only authorized for role 3 (admins)
+        if (in_array($action, ['delete'])) {
+            if (isset($user['role']) && $user['role'] >= 3) {
+                return true;
+            }
         }
     }
 

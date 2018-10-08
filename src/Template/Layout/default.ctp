@@ -46,17 +46,25 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <li>
                     <?= $this->Html->link('Home', ['controller' => 'Customers', 'action' => 'index']) ?>
                 </li>
-            <li>
+
             <?php
             $loguser = $this->request->session()->read('Auth.User');
              if ($loguser) {
                 $user = $loguser['email'];
+
+                echo '<li>';
                 echo $this->Html->link($user . ' logout', ['controller' => 'Users', 'action' => 'logout']);
+                echo '</li>';
             } else {
-                echo $this->Html->link('login', ['controller' => 'Users', 'action' => 'login']);
+                echo '<li>';
+                echo $this->Html->link('Login', ['controller' => 'Users', 'action' => 'login']);
+                echo '</li>';
+
+                 echo '<li>';
+                 echo $this->Html->link('Register', ['controller' => 'Users', 'action' => 'add']);
+                 echo '</li>';
             }
             ?>
-            </li>
             <li>
                 <?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]) ?>
             </li>
