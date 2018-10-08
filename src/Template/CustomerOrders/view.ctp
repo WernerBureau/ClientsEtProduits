@@ -14,7 +14,7 @@
     </ul>
 </nav>
 <div class="customerOrders view large-9 medium-8 columns content">
-    <h3><?= h($customerOrder->id) ?></h3>
+    <h3><?= h(' Order # '.$customerOrder->id) ?></h3>
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Id') ?></th>
@@ -25,20 +25,31 @@
             <td><?= $this->Number->format($customerOrder->customer_id) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Order Date') ?></th>
-            <td><?= h($customerOrder->order_date) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Created') ?></th>
+            <th scope="row"><?= __('Order date') ?></th>
             <td><?= h($customerOrder->created) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Modified') ?></th>
             <td><?= h($customerOrder->modified) ?></td>
         </tr>
-        <tr>
-            <th scope="row"><?= __('Order item test') ?></th>
-            <td><?= h($customerOrder->order_items->total) ?></td>
-        </tr>
+    </table>
+
+    <h4><?= h(' Order items ') ?></h4>
+    <table>
+        <tbody>
+        <th scope="row"><?= __('Item name') ?></th>
+        <th scope="row"><?= __('Price') ?></th>
+        <th scope="row"><?= __('Quantity') ?></th>
+        <th scope="row"><?= __('Total for this item') ?></th>
+
+        <?php foreach ($customerOrder->products as $product): ?>
+            <tr>
+                <td><?= h($product->name) ?></td>
+                <td><?= $this->Number->format($product->price). ' $' ?></td>
+                <td><?= $this->Number->format($product->_joinData->quantity) ?></td>
+                <td><?= $this->Number->format($product->_joinData->total) . ' $' ?></td>
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
     </table>
 </div>

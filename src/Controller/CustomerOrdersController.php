@@ -55,9 +55,11 @@ class CustomerOrdersController extends AppController
      */
     public function view($id = null)
     {
+
         $customerOrder = $this->CustomerOrders->get($id, [
-            'contain' => ['order_items']
+            'contain' => ['order_items', 'products']
         ]);
+
 
         $this->set('customerOrder', $customerOrder);
     }
@@ -74,7 +76,7 @@ class CustomerOrdersController extends AppController
             $customerOrder = $this->CustomerOrders->patchEntity($customerOrder, $this->request->getData());
 
             $customerOrder->user_id = $this->Auth->user('id');
-            if ($this->CustomerOrders->save($customerOrder)) {
+            if ($this->CustomerOrders->save($customerOrder , ['associated' => ['Order_items._joinData.quantity']])) {
 
                 $orderItem = $this->CustomerOrders->Order_items->newEntity();
                 $orderItem->order_id = $customerOrder->get('id');

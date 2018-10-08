@@ -49,6 +49,12 @@ class CustomerOrdersTable extends Table
         $this->hasMany('Order_items', [
             'foreignKey' => 'order_id'
         ]);
+
+        $this->belongsToMany('Products', [
+            'foreignKey' => 'order_id',
+            'targetForeignKey' => 'product_id',
+            'joinTable' => 'order_items'
+        ]);
     }
 
     /**
@@ -62,6 +68,7 @@ class CustomerOrdersTable extends Table
         $validator
             ->integer('id')
             ->allowEmpty('id', 'create');
+
 
 
 

@@ -15,8 +15,8 @@
     <fieldset>
         <legend><?= __('Add Customer Order') ?></legend>
         <?php
-            echo $this->Form->control('customer_id');
-            echo $this->Form->control('products._ids');
+            echo $this->Form->control('customer_id', ['required' => true]);
+            echo $this->Form->control('products._ids', ['required' => true]);
             echo $this->Form->control('order_items.quantity');
         ?>
     </fieldset>

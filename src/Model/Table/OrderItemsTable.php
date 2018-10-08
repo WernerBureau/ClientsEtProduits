@@ -60,7 +60,9 @@ class OrderItemsTable extends Table
 
         $validator
             ->integer('quantity')
-            ->allowEmpty('quantity');
+            ->notEmpty('quantity');
+
+
 
         $validator
             ->decimal('total')
