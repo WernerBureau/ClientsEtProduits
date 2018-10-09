@@ -31,6 +31,7 @@ class CustomerOrder extends Entity
         'created' => true,
         'modified' => true,
         'customer' => true,
+        'customers' => true,
         'products' => true,
         'order_items' => true
     ];

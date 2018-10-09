@@ -16,6 +16,13 @@ class FilesController extends AppController
     public function isAuthorized($user) {
         $action = $this->request->getParam('action');
 
+        // The view action is authorized for logged in users
+        if (in_array($action, ['view'])) {
+            if (isset($user['role']) && $user['role'] >= 1) {
+                return true;
+            }
+        }
+
         // The add action is only authorized for role 2 and 3 (super-users)
         if (in_array($action, ['add'])) {
             if (isset($user['role']) && $user['role'] >= 2) {

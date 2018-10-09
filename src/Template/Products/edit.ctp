@@ -23,7 +23,7 @@
         <?php
             echo $this->Form->control('type_id');
             echo $this->Form->control('name');
-            echo $this->Form->control('price');
+            echo $this->Form->control('price', ['type' => 'decimal']);
             echo $this->Form->control('description');
             echo $this->Form->control('files._ids', ['options' => $files]);
         ?>

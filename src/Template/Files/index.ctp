@@ -17,35 +17,32 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <?php if ($this->request->getSession()->read('Auth.User.role') >= 3) { ?>
+                    <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <?php } ?>
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
                 <th scope="col"><?= __('Preview') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('status') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($files as $file): ?>
             <tr>
-                <td><?= $this->Number->format($file->id) ?></td>
+                <?php if ($this->request->getSession()->read('Auth.User.role') >= 3) { ?>
+                    <td><?= $this->Number->format($file->id) ?></td>
+                <?php } ?>
                 <td><?= h($file->name) ?></td>
                 <td>
                     <?php
                     echo $this->Html->image($file->path . $file->name, [
                         "alt" => $file->name,
-                        "width" => "220px",
-                        "height" => "150px",
+                        "width" => "50px",
+                        "height" => "50px",
                         'url' => ['action' => 'view', $file->id]
                     ]);
                     ?>
                 </td>
 
-
-                <td><?= h($file->created) ?></td>
-                <td><?= h($file->modified) ?></td>
-                <td><?= h($file->status) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $file->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $file->id]) ?>

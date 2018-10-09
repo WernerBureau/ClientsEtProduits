@@ -68,10 +68,6 @@ class CustomerOrdersTable extends Table
         $validator
             ->integer('id')
             ->allowEmpty('id', 'create');
-
-
-
-
         return $validator;
     }
 

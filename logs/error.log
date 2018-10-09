@@ -4235,3 +4235,163 @@ Stack Trace:
 #17 {main}
 
 
+2018-10-09 21:08:16 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Validation\Validator.php, line 15]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 109
+[main] - [internal], line ??
+
+
+
+2018-10-09 21:08:17 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Validation\Validator.php line=15 in [C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
+Cake\Error\ErrorHandler::_sendResponse() - CORE\src\Error\ErrorHandler.php, line 198
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 139
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 193
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 231
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 109
+[main] - [internal], line ??
+
+
+
+2018-10-09 21:08:17 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Validation\Validator.php:15) in [C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
+Cake\Error\ErrorHandler::_sendResponse() - CORE\src\Error\ErrorHandler.php, line 198
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 139
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 193
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 231
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 109
+[main] - [internal], line ??
+
+
+
+2018-10-09 21:08:17 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Validation\Validator.php:15) in [C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
+Cake\Error\ErrorHandler::_sendResponse() - CORE\src\Error\ErrorHandler.php, line 198
+Cake\Error\ErrorHandler::_displayException() - CORE\src\Error\ErrorHandler.php, line 139
+Cake\Error\BaseErrorHandler::handleException() - CORE\src\Error\BaseErrorHandler.php, line 193
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 231
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 109
+[main] - [internal], line ??
+
+
+
+2018-10-09 21:08:17 Error: [Cake\Error\FatalErrorException] Maximum execution time of 30 seconds exceeded in C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Validation\Validator.php on line 15
+Request URL: /
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(109): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Maximum executi...', 'C:\\Program File...', 15)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-10-09 21:29:56 Error: [Error] Call to undefined method Cake\Http\Session::get()
+Request URL: /files/change-lang/en_US
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\AppController->changeLang('en_US')
+#1 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FilesController))
+#3 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\webroot\index.php(40): Cake\Http\Server->run()
+#18 {main}
+
+
+2018-10-09 21:53:11 Error: [Error] Call to undefined method Cake\Validation\Validator::float()
+Request URL: /products/add
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Validation\ValidatorAwareTrait.php(178): App\Model\Table\ProductsTable->validationDefault(Object(Cake\Validation\Validator))
+#1 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Validation\ValidatorAwareTrait.php(151): Cake\ORM\Table->createValidator('default')
+#2 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(474): Cake\ORM\Table->getValidator('default')
+#3 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(417): Cake\View\Form\EntityContext->_getValidator(Array)
+#4 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1445): Cake\View\Form\EntityContext->isRequired('type_id')
+#5 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1344): Cake\View\Helper\FormHelper->_magicOptions('type_id', Array, true)
+#6 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1161): Cake\View\Helper\FormHelper->_parseOptions('type_id', Array)
+#7 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\src\Template\Products\add.ctp(18): Cake\View\Helper\FormHelper->control('type_id')
+#8 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\View\View.php(1240): include('C:\\Program File...')
+#9 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\View\View.php(1201): Cake\View\View->_evaluate('C:\\Program File...', Array)
+#10 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\View\View.php(803): Cake\View\View->_render('C:\\Program File...')
+#11 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Controller\Controller.php(777): Cake\View\View->render(NULL, NULL)
+#12 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#13 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ProductsController))
+#14 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\webroot\index.php(40): Cake\Http\Server->run()
+#29 {main}
+
+
+2018-10-09 21:56:51 Error: [Error] Call to undefined method Cake\Validation\Validator::money()
+Request URL: /products/add
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Validation\ValidatorAwareTrait.php(178): App\Model\Table\ProductsTable->validationDefault(Object(Cake\Validation\Validator))
+#1 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Validation\ValidatorAwareTrait.php(151): Cake\ORM\Table->createValidator('default')
+#2 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(474): Cake\ORM\Table->getValidator('default')
+#3 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(417): Cake\View\Form\EntityContext->_getValidator(Array)
+#4 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1445): Cake\View\Form\EntityContext->isRequired('type_id')
+#5 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1344): Cake\View\Helper\FormHelper->_magicOptions('type_id', Array, true)
+#6 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1161): Cake\View\Helper\FormHelper->_parseOptions('type_id', Array)
+#7 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\src\Template\Products\add.ctp(18): Cake\View\Helper\FormHelper->control('type_id')
+#8 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\View\View.php(1240): include('C:\\Program File...')
+#9 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\View\View.php(1201): Cake\View\View->_evaluate('C:\\Program File...', Array)
+#10 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\View\View.php(803): Cake\View\View->_render('C:\\Program File...')
+#11 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Controller\Controller.php(777): Cake\View\View->render(NULL, NULL)
+#12 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#13 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ProductsController))
+#14 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 C:\Program Files (x86)\Ampps\www\ClientsEtProduits\webroot\index.php(40): Cake\Http\Server->run()
+#29 {main}
+
+

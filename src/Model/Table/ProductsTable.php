@@ -80,7 +80,7 @@ class ProductsTable extends Table
             ->notEmpty('name');
 
         $validator
-            ->decimal('price')
+            ->decimal('price', 2)
             ->requirePresence('price', 'create')
             ->notEmpty('price');
 

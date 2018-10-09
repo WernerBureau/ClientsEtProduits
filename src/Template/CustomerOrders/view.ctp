@@ -38,7 +38,7 @@
     <table>
         <tbody>
         <th scope="row"><?= __('Item name') ?></th>
-        <th scope="row"><?= __('Price') ?></th>
+        <th scope="row"><?= __('Current price on item') ?></th>
         <th scope="row"><?= __('Quantity') ?></th>
         <th scope="row"><?= __('Total for this item') ?></th>
 
