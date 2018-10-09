@@ -21,6 +21,46 @@ class UsersController extends AppController
         if (in_array($action, ['confirmation'])) {
             return true;
         }
+
+        // The edit action is authorized for logged in users (super-users)
+        if (in_array($action, ['edit'])) {
+            if (isset($user['role']) && $user['role'] >= 3) {
+                return true;
+            }
+
+            if (isset($user['role']) && $user['role'] >= 1) {
+                $id = $this->request->getParam('pass.0');
+                if (!$id) {
+                    return false;
+                }
+
+                $profile = $this->Users->findById($id)->first();
+                return $profile->id === $user['id'];
+            }
+        }
+
+        if (in_array($action, ['view'])) {
+            if (isset($user['role']) && $user['role'] >= 3) {
+                return true;
+            }
+
+            if (isset($user['role']) && $user['role'] >= 1) {
+                $id = $this->request->getParam('pass.0');
+                if (!$id) {
+                    return false;
+                }
+
+                $profile = $this->Users->findById($id)->first();
+                return $profile->id === $user['id'];
+            }
+        }
+
+        // The delete action is only authorized for role 3 (admins)
+        if (in_array($action, ['delete'])) {
+            if (isset($user['role']) && $user['role'] >= 3) {
+                return true;
+            }
+        }
     }
 
     public function initialize() {

@@ -16,9 +16,10 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
+                <?php if ($this->request->getSession()->read('Auth.User.role') >= 3) { ?>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <? } ?>
                 <th scope="col"><?= $this->Paginator->sort('email') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('password') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -26,19 +27,48 @@
         </thead>
         <tbody>
             <?php foreach ($users as $user): ?>
-            <tr>
-                <td><?= $this->Number->format($user->id) ?></td>
+
+            <?php if ($this->request->getSession()->read('Auth.User.id') === $user['id']) { ?>
+                <tr>
+
+                <?php if ($this->request->getSession()->read('Auth.User.role') >= 3) { ?>
+                        <td><?= $this->Number->format($user->id) ?></td>
+                <? } ?>
                 <td><?= h($user->email) ?></td>
-                <td><?= h($user->password) ?></td>
                 <td><?= h($user->created) ?></td>
                 <td><?= h($user->modified) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $user->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id]) ?>
+
+                    <?php if ($this->request->getSession()->read('Auth.User.role') >= 3) { ?>
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?>
+                     <? } ?>
                 </td>
-            </tr>
+                </tr>
+            <? } else { ?>
+            <?php if ($this->request->getSession()->read('Auth.User.role') >= 3) { ?>
+                <tr>
+
+                    <?php if ($this->request->getSession()->read('Auth.User.role') >= 3) { ?>
+                        <td><?= $this->Number->format($user->id) ?></td>
+                <? } ?>
+                <td><?= h($user->email) ?></td>
+                <td><?= h($user->created) ?></td>
+                <td><?= h($user->modified) ?></td>
+                <td class="actions">
+                    <?= $this->Html->link(__('View'), ['action' => 'view', $user->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id]) ?>
+
+                    <?php if ($this->request->getSession()->read('Auth.User.role') >= 3) { ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?>
+                     <? } ?>
+                </td>
+                </tr>
+                <? }?>
+                <? }?>
             <?php endforeach; ?>
+
         </tbody>
     </table>
     <div class="paginator">
