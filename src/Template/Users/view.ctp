@@ -14,7 +14,7 @@
     </ul>
 </nav>
 <div class="users view large-9 medium-8 columns content">
-    <h3><?= h($user->id) ?></h3>
+    <h3><?= h($user->email) ?></h3>
     <table class="vertical-table">
         <?php if ($this->request->getSession()->read('Auth.User.role') >= 3) { ?>
         <tr>
@@ -25,6 +25,18 @@
         <tr>
             <th scope="row"><?= __('Email') ?></th>
             <td><?= h($user->email) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Role') ?></th>
+            <?php if ($user->role === 1){ ?>
+                <td><?= __('Visitor') ?></td>
+            <?php } ?>
+            <?php if ($user->role === 2){ ?>
+                <td><?= __('Manager (Super-user)') ?></td>
+            <?php } ?>
+            <?php if ($user->role === 3){ ?>
+                <td><?= __('Administrator') ?></td>
+            <?php } ?>
         </tr>
         <tr>
             <th scope="row"><?= __('Created') ?></th>

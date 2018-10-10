@@ -40,7 +40,7 @@
                 <td><?= $this->Number->format($product->id) ?></td>
                 <?php } ?>
                 <td><?= h($product->name) ?></td>
-                <td><?= $this->Number->format($product->price) ?></td>
+                <td><?= $this->Number->currency($product->price, 'USD') ?></td>
                 <td><?= h($product->description) ?></td>
                 <td><?= h($product->created) ?></td>
                 <td><?= h($product->modified) ?></td>

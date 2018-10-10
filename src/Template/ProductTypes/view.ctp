@@ -14,16 +14,18 @@
     </ul>
 </nav>
 <div class="productTypes view large-9 medium-8 columns content">
-    <h3><?= h($productType->id) ?></h3>
+    <h3><?= h($productType->type) ?></h3>
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Type') ?></th>
             <td><?= h($productType->type) ?></td>
         </tr>
+        <?php if ($this->request->getSession()->read('Auth.User.role') >= 3) { ?>
         <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($productType->id) ?></td>
         </tr>
+        <?php } ?>
         <tr>
             <th scope="row"><?= __('Created') ?></th>
             <td><?= h($productType->created) ?></td>

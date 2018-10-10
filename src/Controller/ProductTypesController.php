@@ -16,6 +16,12 @@ class ProductTypesController extends AppController
 
         $action = $this->request->getParam('action');
 
+        // The view action is only authorized for logged in users
+        if (in_array($action, ['view'])) {
+            if (isset($user['role']) && $user['role'] >= 1) {
+                return true;
+            }
+        }
 
         // The add action is only authorized for role 2 and 3 (super-users)
         if (in_array($action, ['add'])) {
@@ -23,6 +29,22 @@ class ProductTypesController extends AppController
                 return true;
             }
         }
+
+        // The edit action is only authorized for role 2 and 3 (super-users)
+        if (in_array($action, ['edit'])) {
+            if (isset($user['role']) && $user['role'] >= 2) {
+                return true;
+            }
+        }
+
+        // The delete action is only authorized for role 3 (admin)
+        if (in_array($action, ['delete'])) {
+            if (isset($user['role']) && $user['role'] >= 2) {
+                return true;
+            }
+        }
+
+
 
     }
 

@@ -17,12 +17,8 @@
     <h3><?= h(' Order # '.$customerOrder->id) ?></h3>
     <table class="vertical-table">
         <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($customerOrder->id) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Customer Id') ?></th>
-            <td><?= $this->Number->format($customerOrder->customer_id) ?></td>
+            <th scope="row"><?= __('Customer name') ?></th>
+            <td><?= h($customerOrder->customer['name']) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Order date') ?></th>

@@ -15,7 +15,7 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Order id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('customer_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
@@ -26,7 +26,7 @@
             <?php foreach ($customerOrders as $customerOrder): ?>
             <tr>
                 <td><?= $this->Number->format($customerOrder->id) ?></td>
-                <td><?= $this->Number->format($customerOrder->customer_id) ?></td>
+                <td><?= h($customerOrder->customer['name']) ?></td>
                 <td><?= h($customerOrder->created) ?></td>
                 <td><?= h($customerOrder->modified) ?></td>
                 <td class="actions">

@@ -33,8 +33,6 @@
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('phone') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('email') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -48,8 +46,6 @@
                 <td><?= h($customer->name) ?></td>
                 <td><?= h($customer->phone) ?></td>
                 <td><?= h($customer->email) ?></td>
-                <td><?= h($customer->created) ?></td>
-                <td><?= h($customer->modified) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $customer->id]) ?>
                     <?php if ($this->request->getSession()->read('Auth.User.role') >= 2){ ?>

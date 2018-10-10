@@ -48,6 +48,9 @@ class CustomerOrdersController extends AppController
      */
     public function index()
     {
+        $this->paginate = [
+            'contain' => ['Customers']
+        ];
         $customerOrders = $this->paginate($this->CustomerOrders);
 
         $this->set(compact('customerOrders'));
@@ -64,7 +67,7 @@ class CustomerOrdersController extends AppController
     {
 
         $customerOrder = $this->CustomerOrders->get($id, [
-            'contain' => ['order_items', 'products']
+            'contain' => ['order_items', 'products', 'Customers']
         ]);
 
 

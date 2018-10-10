@@ -36,7 +36,7 @@
         </tr>
         <tr>
             <th scope="row"><?= __('Price') ?></th>
-            <td><?= $this->Number->format($product->price).' $' ?></td>
+            <td><?= $this->Number->currency($product->price, 'USD') ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Image') ?></th>
