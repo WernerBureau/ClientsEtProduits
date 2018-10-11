@@ -16,119 +16,120 @@ msgstr ""
 
 #: Controller/CustomerOrdersController.php:57
 msgid "The customer order has been saved."
-msgstr "La commande du client a été enregistrée."
+msgstr "Der Kundenauftrag wurde gespeichert."
 
 #: Controller/CustomerOrdersController.php:61
 msgid "The customer order could not be saved. Please, try again."
-msgstr "La commande du client n'a pas pu être sauvegardée. Veuillez réessayer."
+msgstr "Der Kundenauftrag konnte nicht gespeichert werden. Bitte versuche es erneut."
 
 #: Controller/CustomerOrdersController.php:88
 msgid "Your article has been updated."
-msgstr "Votre article a été mis à jour."
+msgstr "Ihr Artikel wurde aktualisiert."
 
 #: Controller/CustomerOrdersController.php:91
 msgid "Unable to update your article."
-msgstr "Impossible de mettre à jour votre article."
+msgstr "Der Artikel konnte nicht aktualisiert werden."
 
 #: Controller/CustomerOrdersController.php:108
 msgid "The customer order has been deleted."
-msgstr "La commande du client a été supprimée."
+msgstr "Der Kundenauftrag wurde gelöscht
+"
 
 #: Controller/CustomerOrdersController.php:110
 msgid "The customer order could not be deleted. Please, try again."
-msgstr "La commande du client n'a pas pu être supprimée. Veuillez réessayer."
+msgstr "Der Kundenauftrag konnte nicht gelöscht werden. Bitte versuche es erneut."
 
 #: Controller/CustomersController.php:70;99
 msgid "The customer has been saved."
-msgstr "Le client a été enregistré."
+msgstr "Der Kunde wurde gespeichert."
 
 #: Controller/CustomersController.php:74;103
 msgid "The customer could not be saved. Please, try again."
-msgstr "Le client n'a pas pu être enregistré. Veuillez réessayer."
+msgstr "Der Kunde konnte nicht gespeichert werden. Bitte versuche es erneut."
 
 #: Controller/CustomersController.php:120
 msgid "The customer has been deleted."
-msgstr "Le client a été supprimé."
+msgstr "Der Kunde wurde gelöscht."
 
 #: Controller/CustomersController.php:122
 msgid "The customer could not be deleted. Please, try again."
-msgstr "Le client n'a pas pu être supprimé. Veuillez réessayer."
+msgstr "Der Kunde konnte nicht gelöscht werden. Bitte versuche es erneut."
 
 #: Controller/FilesController.php:69
 msgid "File has been uploaded and inserted successfully."
-msgstr "Le fichier a été téléchargé et inséré avec succès."
+msgstr "Die Datei wurde hochgeladen und erfolgreich eingefügt."
 
 #: Controller/FilesController.php:71;74
 msgid "Unable to upload file, please try again."
-msgstr "Impossible de télécharger le fichier, veuillez réessayer."
+msgstr "Datei konnte nicht hochgeladen werden. Bitte versuchen Sie es erneut."
 
 #: Controller/FilesController.php:77
 msgid "Please choose a file to upload."
-msgstr "Veuillez choisir un fichier à télécharger."
+msgstr "Bitte wählen Sie eine Datei zum Hochladen."
 
 #: Controller/FilesController.php:98
 msgid "The file has been saved."
-msgstr "Le fichier a été enregistré."
+msgstr "Die Datei wurde gespeichert."
 
 #: Controller/FilesController.php:102
 msgid "The file could not be saved. Please, try again."
-msgstr "Le fichier n'a pas pu être enregistré. Veuillez réessayer."
+msgstr "Die Datei konnte nicht gespeichert werden. Bitte versuche es erneut."
 
 #: Controller/FilesController.php:120
 msgid "The file has been deleted."
-msgstr "Le fichier a été supprimé."
+msgstr "Die Datei wurde gelöscht."
 
 #: Controller/FilesController.php:122
 msgid "The file could not be deleted. Please, try again."
-msgstr "Le fichier n'a pas pu être supprimé. Veuillez réessayer."
+msgstr "Die Datei konnte nicht gelöscht werden. Bitte versuche es erneut."
 
 #: Controller/ProductTypesController.php:68;92
 msgid "The product type has been saved."
-msgstr "Le type de produit a été enregistré."
+msgstr "Der Produkttyp wurde gespeichert."
 
 #: Controller/ProductTypesController.php:72;96
 msgid "The product type could not be saved. Please, try again."
-msgstr "Le type de produit n'a pas pu être enregistré. Veuillez réessayer."
+msgstr "Der Produkttyp konnte nicht gespeichert werden. Bitte versuche es erneut."
 
 #: Controller/ProductTypesController.php:113
 msgid "The product type has been deleted."
-msgstr "Le type de produit a été supprimé."
+msgstr "Der Produkttyp wurde gelöscht."
 
 #: Controller/ProductTypesController.php:115
 msgid "The product type could not be deleted. Please, try again."
-msgstr "Le type de produit n'a pas pu être supprimé. Veuillez réessayer."
+msgstr "Der Produkttyp konnte nicht gelöscht werden. Bitte versuche es erneut."
 
 #: Controller/ProductsController.php:78;106
 msgid "The product has been saved."
-msgstr "Le produit a été enregistré."
+msgstr "Das Produkt wurde gespeichert."
 
 #: Controller/ProductsController.php:82;110
 msgid "The product could not be saved. Please, try again."
-msgstr "L'application n'a pas pu être enregistré. Veuillez réessayer."
+msgstr "Das Produkt konnte nicht gespeichert werden. Bitte versuche es erneut."
 
 #: Controller/ProductsController.php:131
 msgid "The product has been deleted."
-msgstr "Le produit a été supprimé."
+msgstr "Das Produkt wurde gelöscht."
 
 #: Controller/ProductsController.php:133
 msgid "The product could not be deleted. Please, try again."
-msgstr "Le produit n'a pas pu être supprimé. Veuillez réessayer."
+msgstr "Das Produkt konnte nicht gelöscht werden. Bitte versuche es erneut."
 
 #: Controller/UsersController.php:78;102
 msgid "The user has been saved."
-msgstr "L'utilisateur a été enregistré."
+msgstr "Der Benutzer wurde gespeichert."
 
 #: Controller/UsersController.php:82;106
 msgid "The user could not be saved. Please, try again."
-msgstr "L'utilisateur n'as pas pû être enregistré. S'il vous plaît, essayez à nouveau."
+msgstr "Der Benutzer konnte nicht gespeichert werden. Bitte versuche es erneut."
 
 #: Controller/UsersController.php:123
 msgid "The user has been deleted."
-msgstr "L'utilisateur a été supprimé."
+msgstr "Der Benutzer wurde gelöscht."
 
 #: Controller/UsersController.php:125
 msgid "The user could not be deleted. Please, try again."
-msgstr "L'utilisateur n'a pas pu être supprimé. Veuillez réessayer."
+msgstr "Der Benutzer konnte nicht gelöscht werden. Bitte versuche es erneut."
 
 #: Template/CustomerOrders/add.ctp:9
 #: Template/CustomerOrders/edit.ctp:9
@@ -159,7 +160,7 @@ msgstr "L'utilisateur n'a pas pu être supprimé. Veuillez réessayer."
 #: Template/Users/index.ctp:9;23
 #: Template/Users/view.ctp:9
 msgid "Actions"
-msgstr "Menu"
+msgstr "Aktionen"
 
 #: Template/CustomerOrders/add.ctp:10
 #: Template/CustomerOrders/edit.ctp:16
@@ -169,11 +170,11 @@ msgstr "Menu"
 #: Template/Customers/index.ctp:11
 #: Template/Customers/view.ctp:14
 msgid "List Customer Orders"
-msgstr "Liste des commandes client"
+msgstr "Kundenaufträge auflisten"
 
 #: Template/CustomerOrders/add.ctp:16
 msgid "Add Customer Order"
-msgstr "Ajouter une commande client"
+msgstr "Kundenauftrag hinzufügen"
 
 #: Template/CustomerOrders/add.ctp:30
 #: Template/CustomerOrders/edit.ctp:28
@@ -190,7 +191,7 @@ msgstr "Ajouter une commande client"
 #: Template/Users/add.ctp:23
 #: Template/Users/edit.ctp:28
 msgid "Submit"
-msgstr "Soumettre"
+msgstr "einreichen"
 
 #: Template/CustomerOrders/edit.ctp:11
 #: Template/CustomerOrders/index.ctp:37
@@ -209,7 +210,7 @@ msgstr "Soumettre"
 #: Template/Users/edit.ctp:11
 #: Template/Users/index.ctp:37
 msgid "Delete"
-msgstr "Effacer"
+msgstr "Löschen"
 
 #: Template/CustomerOrders/edit.ctp:13
 #: Template/CustomerOrders/index.ctp:37
@@ -233,12 +234,12 @@ msgstr "Effacer"
 #: Template/Users/index.ctp:37
 #: Template/Users/view.ctp:11
 msgid "Are you sure you want to delete # {0}?"
-msgstr "Êtes-vous sûr de vouloir supprimer # {0} ?"
+msgstr "Möchten Sie # {0} wirklich löschen?"
 
 #: Template/CustomerOrders/edit.ctp:22
 #: Template/CustomerOrders/view.ctp:10
 msgid "Edit Customer Order"
-msgstr "Modifier la commande client"
+msgstr "Kundenauftrag bearbeiten"
 
 #: Template/CustomerOrders/index.ctp:10
 #: Template/CustomerOrders/view.ctp:13
@@ -247,11 +248,11 @@ msgstr "Modifier la commande client"
 #: Template/Customers/index.ctp:12
 #: Template/Customers/view.ctp:15
 msgid "New Customer Order"
-msgstr "Nouvelle commande client"
+msgstr "Neue Kundenbestellung"
 
 #: Template/CustomerOrders/index.ctp:14
 msgid "Customer Orders"
-msgstr "Commandes Clients"
+msgstr "Kundenbestellungen"
 
 #: Template/CustomerOrders/index.ctp:35
 #: Template/Customers/index.ctp:43
@@ -263,7 +264,7 @@ msgstr "Commandes Clients"
 #: Template/Products/index.ctp:39
 #: Template/Users/index.ctp:35
 msgid "View"
-msgstr "Vue"
+msgstr "Aussicht"
 
 #: Template/CustomerOrders/index.ctp:36
 #: Template/Customers/index.ctp:44
@@ -275,7 +276,7 @@ msgstr "Vue"
 #: Template/Products/index.ctp:40
 #: Template/Users/index.ctp:36
 msgid "Edit"
-msgstr "modifier"
+msgstr "Bearbeiten"
 
 #: Template/CustomerOrders/index.ctp:45
 #: Template/Customers/index.ctp:53
@@ -285,7 +286,7 @@ msgstr "modifier"
 #: Template/Products/index.ctp:49
 #: Template/Users/index.ctp:45
 msgid "first"
-msgstr "premier"
+msgstr "zuerst"
 
 #: Template/CustomerOrders/index.ctp:46
 #: Template/Customers/index.ctp:54
@@ -295,7 +296,7 @@ msgstr "premier"
 #: Template/Products/index.ctp:50
 #: Template/Users/index.ctp:46
 msgid "previous"
-msgstr "précédent"
+msgstr "Bisherige"
 
 #: Template/CustomerOrders/index.ctp:48
 #: Template/Customers/index.ctp:56
@@ -305,7 +306,7 @@ msgstr "précédent"
 #: Template/Products/index.ctp:52
 #: Template/Users/index.ctp:48
 msgid "next"
-msgstr "prochain"
+msgstr "Nächster"
 
 #: Template/CustomerOrders/index.ctp:49
 #: Template/Customers/index.ctp:57
@@ -315,7 +316,7 @@ msgstr "prochain"
 #: Template/Products/index.ctp:53
 #: Template/Users/index.ctp:49
 msgid "last"
-msgstr "dernier"
+msgstr "letzte"
 
 #: Template/CustomerOrders/index.ctp:51
 #: Template/Customers/index.ctp:59
@@ -325,11 +326,11 @@ msgstr "dernier"
 #: Template/Products/index.ctp:55
 #: Template/Users/index.ctp:51
 msgid "Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total"
-msgstr "Page {{page}} sur {{pages}}, affichant le {{courant}} enregistrement (s) sur le {{nombre}} total"
+msgstr "Seite {{page}} von {{pages}}, die {{current}} Datensätze von {{count}} gesamt anzeigt"
 
 #: Template/CustomerOrders/view.ctp:11
 msgid "Delete Customer Order"
-msgstr "Supprimer la commande client"
+msgstr "Kundenauftrag löschen"
 
 #: Template/CustomerOrders/view.ctp:20
 #: Template/Customers/view.ctp:40;57;86
@@ -339,17 +340,17 @@ msgstr "Supprimer la commande client"
 #: Template/Products/view.ctp:20
 #: Template/Users/view.ctp:28
 msgid "Id"
-msgstr "Id"
+msgstr "Ich würde"
 
 #: Template/CustomerOrders/view.ctp:24
 #: Template/Customers/view.ctp:58;87
 msgid "Customer Id"
-msgstr "N ° de client"
+msgstr "Kundennummer"
 
 #: Template/CustomerOrders/view.ctp:28
 #: Template/Customers/view.ctp:59
 msgid "Order Date"
-msgstr "Date de commande"
+msgstr "Auftragsdatum"
 
 #: Template/CustomerOrders/view.ctp:32
 #: Template/Customers/view.ctp:44;60;90
@@ -359,7 +360,7 @@ msgstr "Date de commande"
 #: Template/Products/view.ctp:53
 #: Template/Users/view.ctp:32
 msgid "Created"
-msgstr "Créé"
+msgstr "Erstellt"
 
 #: Template/CustomerOrders/view.ctp:36
 #: Template/Customers/view.ctp:48;61;91
@@ -369,17 +370,17 @@ msgstr "Créé"
 #: Template/Products/view.ctp:57
 #: Template/Users/view.ctp:36
 msgid "Modified"
-msgstr "Modifié"
+msgstr "Geändert"
 
 #: Template/CustomerOrders/view.ctp:40
 msgid "Order item test"
-msgstr "Test d'article de commande"
+msgstr "Auftragspositionstest"
 
 #: Template/Customers/add.ctp:10
 #: Template/Customers/edit.ctp:16
 #: Template/Customers/view.ctp:12
 msgid "List Customers"
-msgstr "Liste des clients"
+msgstr "Kunden auflisten"
 
 #: Template/Customers/add.ctp:13
 #: Template/Customers/edit.ctp:19
@@ -389,7 +390,7 @@ msgstr "Liste des clients"
 #: Template/Users/edit.ctp:16
 #: Template/Users/view.ctp:12
 msgid "List Users"
-msgstr "Liste des utilisateurs"
+msgstr "Benutzer auflisten"
 
 #: Template/Customers/add.ctp:14
 #: Template/Customers/edit.ctp:20
@@ -398,43 +399,43 @@ msgstr "Liste des utilisateurs"
 #: Template/Users/index.ctp:10
 #: Template/Users/view.ctp:13
 msgid "New User"
-msgstr "Nouvel utilisateur"
+msgstr "Neuer Benutzer"
 
 #: Template/Customers/add.ctp:20
 msgid "Add Customer"
-msgstr "Ajouter un client"
+msgstr "Kunden hinzufügen"
 
 #: Template/Customers/edit.ctp:26
 #: Template/Customers/view.ctp:10
 msgid "Edit Customer"
-msgstr "Modifier le client"
+msgstr "Kunden bearbeiten"
 
 #: Template/Customers/index.ctp:10
 #: Template/Customers/view.ctp:13
 msgid "New Customer"
-msgstr "Nouveau client"
+msgstr "Neukunde"
 
 #: Template/Customers/index.ctp:18
 msgid "Customers"
-msgstr "Les clients"
+msgstr "Kunden"
 
 #: Template/Customers/view.ctp:11
 msgid "Delete Customer"
-msgstr "Supprimer le client"
+msgstr "Kunden löschen"
 
 #: Template/Customers/view.ctp:24
 msgid "Number"
-msgstr "Nombre"
+msgstr "Nummer"
 
 #: Template/Customers/view.ctp:28
 #: Template/Files/view.ctp:22;53
 #: Template/Products/view.ctp:24
 msgid "Name"
-msgstr "prénom"
+msgstr "Name"
 
 #: Template/Customers/view.ctp:32
 msgid "Phone"
-msgstr "Téléphone"
+msgstr "Telefon"
 
 #: Template/Customers/view.ctp:36;88
 #: Template/Users/view.ctp:20
@@ -443,26 +444,26 @@ msgstr "Email"
 
 #: Template/Customers/view.ctp:53
 msgid "Related Customer Orders"
-msgstr "Commandes clients associées"
+msgstr "Verwandte Kundenaufträge"
 
 #: Template/Customers/view.ctp:82
 msgid "Related Users"
-msgstr "Utilisateurs associés"
+msgstr "Verwandte Benutzer"
 
 #: Template/Customers/view.ctp:89
 #: Template/Users/view.ctp:24
 msgid "Password"
-msgstr "Mot de passe"
+msgstr "Passwort"
 
 #: Template/Emails/index.ctp:1
 msgid "sent"
-msgstr "envoyé"
+msgstr "geschickt"
 
 #: Template/Files/add.ctp:10
 #: Template/Files/edit.ctp:16
 #: Template/Files/view.ctp:12
 msgid "List Files"
-msgstr "Liste des fichiers"
+msgstr "Dateien auflisten"
 
 #: Template/Files/add.ctp:11
 #: Template/Files/edit.ctp:17
@@ -472,7 +473,7 @@ msgstr "Liste des fichiers"
 #: Template/Products/edit.ctp:16
 #: Template/Products/view.ctp:12
 msgid "List Products"
-msgstr "Liste des produits"
+msgstr "Produkte auflisten"
 
 #: Template/Files/add.ctp:12
 #: Template/Files/edit.ctp:18
@@ -481,192 +482,192 @@ msgstr "Liste des produits"
 #: Template/Products/index.ctp:10
 #: Template/Products/view.ctp:13
 msgid "New Product"
-msgstr "Nouveau produit"
+msgstr "Neues Produkt"
 
 #: Template/Files/add.ctp:18
 msgid "Add File"
-msgstr "Ajouter le fichier"
+msgstr "Datei hinzufügen"
 
 #: Template/Files/edit.ctp:24
 #: Template/Files/view.ctp:10
 msgid "Edit File"
-msgstr "Editer le fichier"
+msgstr "Datei bearbeiten"
 
 #: Template/Files/index.ctp:10
 #: Template/Files/view.ctp:13
 msgid "New File"
-msgstr "Nouveau fichier"
+msgstr "Neue Datei"
 
 #: Template/Files/index.ctp:16
 msgid "Files"
-msgstr "Des dossiers"
+msgstr "Dateien"
 
 #: Template/Files/index.ctp:22
 msgid "Preview"
-msgstr "Aperçu"
+msgstr "Vorschau"
 
 #: Template/Files/view.ctp:11
 msgid "Delete File"
-msgstr "Supprimer le fichier"
+msgstr "Datei löschen"
 
 #: Template/Files/view.ctp:26
 msgid "Path"
-msgstr "Chemin"
+msgstr "Pfad"
 
 #: Template/Files/view.ctp:42
 msgid "Status"
-msgstr "Statut"
+msgstr "Status"
 
 #: Template/Files/view.ctp:43
 msgid "Yes"
-msgstr "Oui"
+msgstr "Ja"
 
 #: Template/Files/view.ctp:43
 msgid "No"
-msgstr "Non"
+msgstr "Nein"
 
 #: Template/Files/view.ctp:47
 msgid "Related Products"
-msgstr "Produits reliés"
+msgstr "Ähnliche Produkte"
 
 #: Template/Files/view.ctp:52
 #: Template/Products/view.ctp:28
 msgid "Type Id"
-msgstr "Type ID"
+msgstr "Geben Sie Id ein"
 
 #: Template/Files/view.ctp:54
 #: Template/Products/view.ctp:36
 msgid "Price"
-msgstr "Tar"
+msgstr "Preis"
 
 #: Template/Files/view.ctp:55
 #: Template/Products/view.ctp:32
 msgid "Description"
-msgstr "Description"
+msgstr "Beschreibung"
 
 #: Template/Layout/error.ctp:35
 msgid "Error"
-msgstr "Erreur"
+msgstr "Error"
 
 #: Template/Layout/error.ctp:43
 msgid "Back"
-msgstr "Retour"
+msgstr "Zurück"
 
 #: Template/OrderItems/add.ctp:10
 #: Template/OrderItems/edit.ctp:16
 #: Template/OrderItems/view.ctp:12
 msgid "List Order Items"
-msgstr "Liste des articles de commande"
+msgstr "Bestellpositionen auflisten"
 
 #: Template/OrderItems/add.ctp:16
 msgid "Add Order Item"
-msgstr "Ajouter un article de commande"
+msgstr "Bestellartikel hinzufügen"
 
 #: Template/OrderItems/edit.ctp:22
 #: Template/OrderItems/view.ctp:10
 msgid "Edit Order Item"
-msgstr "Modifier le poste de commande"
+msgstr "Bestellposition bearbeiten"
 
 #: Template/OrderItems/index.ctp:10
 #: Template/OrderItems/view.ctp:13
 msgid "New Order Item"
-msgstr "Nouvel élément de commande"
+msgstr "Neuer Bestellartikel"
 
 #: Template/OrderItems/index.ctp:14
 msgid "Order Items"
-msgstr "Items commandés"
+msgstr "Auftragspositionen"
 
 #: Template/OrderItems/view.ctp:11
 msgid "Delete Order Item"
-msgstr "Supprimer le poste de commande"
+msgstr "Bestellposition löschen"
 
 #: Template/OrderItems/view.ctp:24
 msgid "Order Id"
-msgstr "Numéro de commande"
+msgstr "Auftragsnummer"
 
 #: Template/OrderItems/view.ctp:28
 msgid "Product Id"
-msgstr "Identifiant du produit"
+msgstr "Produkt ID"
 
 #: Template/OrderItems/view.ctp:32
 msgid "Quantity"
-msgstr "Quantité"
+msgstr "Menge"
 
 #: Template/ProductTypes/add.ctp:10
 #: Template/ProductTypes/edit.ctp:16
 #: Template/ProductTypes/view.ctp:12
 msgid "List Product Types"
-msgstr "Liste des types de produits"
+msgstr "Produkttypen auflisten"
 
 #: Template/ProductTypes/add.ctp:16
 msgid "Add Product Type"
-msgstr "Ajouter un type de produit"
+msgstr "Produkttyp hinzufügen"
 
 #: Template/ProductTypes/edit.ctp:22
 #: Template/ProductTypes/view.ctp:10
 msgid "Edit Product Type"
-msgstr "Modifier le type de produit"
+msgstr "Produkttyp bearbeiten"
 
 #: Template/ProductTypes/index.ctp:10
 #: Template/ProductTypes/view.ctp:13
 msgid "New Product Type"
-msgstr "Nouveau type de produit"
+msgstr "Neuer Produkttyp"
 
 #: Template/ProductTypes/index.ctp:14
 msgid "Product Types"
-msgstr "Types de produits"
+msgstr "Produkttypen"
 
 #: Template/ProductTypes/view.ctp:11
 msgid "Delete Product Type"
-msgstr "Supprimer le type de produit"
+msgstr "Löschen Sie den Produkttyp"
 
 #: Template/ProductTypes/view.ctp:20
 msgid "Type"
-msgstr "Type"
+msgstr "Art"
 
 #: Template/Products/add.ctp:16
 msgid "Add Product"
-msgstr "Ajouter un produit"
+msgstr "Produkt hinzufügen"
 
 #: Template/Products/edit.ctp:22
 #: Template/Products/view.ctp:10
 msgid "Edit Product"
-msgstr "Modifier le produit"
+msgstr "Produkt bearbeiten"
 
 #: Template/Products/index.ctp:14
 msgid "Products"
-msgstr "Des produits"
+msgstr "Produkte"
 
 #: Template/Products/view.ctp:11
 msgid "Delete Product"
-msgstr "Supprimer le produit"
+msgstr "Produkt löschen"
 
 #: Template/Products/view.ctp:40
 msgid "Image"
-msgstr "Image"
+msgstr "Bild"
 
 #: Template/Users/add.ctp:16
 msgid "Add User"
-msgstr "Ajouter un utilisateur"
+msgstr "Benutzer hinzufügen"
 
 #: Template/Users/edit.ctp:22
 #: Template/Users/view.ctp:10
 msgid "Edit User"
-msgstr "Modifier l'utilisateur"
+msgstr "Benutzer bearbeiten"
 
 #: Template/Users/index.ctp:14
 msgid "Users"
-msgstr "Utilisateurs"
+msgstr "Benutzer"
 
 #: Template/Users/login.ctp:10
 msgid "Please enter your email and password"
-msgstr "S'il vous plaît entrer votre email et mot de passe"
+msgstr "Bitte geben Sie Ihre E-Mail-Adresse und Ihr Passwort ein"
 
 #: Template/Users/login.ctp:14
 msgid "Login"
-msgstr "S'identifier"
+msgstr "Anmeldung"
 
 #: Template/Users/view.ctp:11
 msgid "Delete User"
-msgstr "Supprimer l'utilisateur"
+msgstr "Benutzer löschen"
 
