@@ -44,7 +44,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <div class="top-bar-section">
             <ul class="right">
                 <li>
-                    <?= $this->Html->link('Home', ['controller' => 'Customers', 'action' => 'index']) ?>
+                    <?= $this->Html->link(__('Home'), ['controller' => 'Customers', 'action' => 'index']) ?>
                 </li>
 
             <?php
@@ -57,7 +57,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
                 if ($role === 1){
                     echo '<li>';
-                    echo $this->Html->link('Please validate your account. Click to resend confirmation email.', ['controller' => 'emails', 'action' => 'index', '?'=>['email'=>$emailaddress, 'uuid'=>$uuidparam]]);
+                    echo $this->Html->link(__('Please validate your account. Click to resend confirmation email.'), ['controller' => 'emails', 'action' => 'index', '?'=>['email'=>$emailaddress, 'uuid'=>$uuidparam]]);
                     echo '</li>';
                 }
 
@@ -66,23 +66,30 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                  echo '</li>';
 
                 echo '<li>';
-                echo $this->Html->link(' logout ', ['controller' => 'Users', 'action' => 'logout']);
+                echo $this->Html->link(__(' logout '), ['controller' => 'Users', 'action' => 'logout']);
                 echo '</li>';
             } else {
                 echo '<li>';
-                echo $this->Html->link('Login', ['controller' => 'Users', 'action' => 'login']);
+                echo $this->Html->link(__('Login'), ['controller' => 'Users', 'action' => 'login']);
                 echo '</li>';
 
                  echo '<li>';
-                 echo $this->Html->link('Register', ['controller' => 'Users', 'action' => 'add']);
+                 echo $this->Html->link(__('Register'), ['controller' => 'Users', 'action' => 'add']);
                  echo '</li>';
             }
             ?>
+            <li>
+                <?= $this->Html->link(__('About'), ['controller' => 'Users', 'action' => 'about']) ?>
+            </li>
             <li>
                 <?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]) ?>
             </li>
             <li>
                 <?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false]) ?>
+            </li>
+
+            <li>
+                <?= $this->Html->link('Deutsch', ['action' => 'changeLang', 'de_DE'], ['escape' => false]) ?>
             </li>
 
             </ul>
