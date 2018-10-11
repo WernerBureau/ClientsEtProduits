@@ -65,6 +65,8 @@
                     <?= __('Super-user: when the user validates their account.') ?>
                     <br />
                     <?= __('They can add and edit new products, product types, files, customers and customer orders.') ?>
+                    <br />
+                    <?= __('superuser@admin.com  |  superuser') ?>
                 </li>
                 <li>
                     <?= __('Admin: role only available to system administrators.') ?>
@@ -72,6 +74,8 @@
                     <?= __('They have access to all the add, edit and delete functions. They can also see IDs from the database.') ?>
                     <br />
                     <?= __('This role is dedicated for debugging and administrating purposes.') ?>
+                    <br />
+                    <?= __('admin@admin.com  |  admin') ?>
                 </li>
             </ul>
 
