@@ -13,7 +13,15 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
+
+//Ajout des scripts Bootstrap et jquery
+echo $this->Html->css('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+echo $this->Html->script([
+    'https://code.jquery.com/jquery-1.12.4.min.js',
+    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'
+]);
+
+$cakeDescription = 'Werner Burat - Clients et Produits';
 ?>
 <!DOCTYPE html>
 <html>

@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "hash": "55cf8c4aaf54583ff50985f9c256e4bb",
+    "content-hash": "0d431123e1a7c1eb3e4bafe7c926191b",
     "packages": [
         {
             "name": "aura/intl",
@@ -50,7 +50,7 @@
                 "l10n",
                 "localization"
             ],
-            "time": "2017-01-20 05:00:11"
+            "time": "2017-01-20T05:00:11+00:00"
         },
         {
             "name": "cakephp/cakephp",
@@ -136,7 +136,7 @@
                 "rapid-development",
                 "validation"
             ],
-            "time": "2018-08-05 01:44:02"
+            "time": "2018-08-05T01:44:02+00:00"
         },
         {
             "name": "cakephp/chronos",
@@ -193,7 +193,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2018-07-11 18:51:56"
+            "time": "2018-07-11T18:51:56+00:00"
         },
         {
             "name": "cakephp/migrations",
@@ -246,7 +246,7 @@
                 "cakephp",
                 "migrations"
             ],
-            "time": "2018-06-22 13:22:45"
+            "time": "2018-06-22T13:22:45+00:00"
         },
         {
             "name": "cakephp/plugin-installer",
@@ -287,7 +287,49 @@
                 }
             ],
             "description": "A composer installer for CakePHP 3.0+ plugins.",
-            "time": "2017-12-24 21:09:29"
+            "time": "2017-12-24T21:09:29+00:00"
+        },
+        {
+            "name": "holt59/cakephp3-bootstrap-helpers",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Holt59/cakephp3-bootstrap-helpers.git",
+                "reference": "18a12d6a0e70a22d8adb3d12057932653087f48f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Holt59/cakephp3-bootstrap-helpers/zipball/18a12d6a0e70a22d8adb3d12057932653087f48f",
+                "reference": "18a12d6a0e70a22d8adb3d12057932653087f48f",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": ">=3.5.0",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "cakephp/cakephp-codesniffer": "~2.1",
+                "phpunit/phpunit": "<6.0"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "installer-name": "Bootstrap"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bootstrap\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Bootstrap Helpers for CakePHP 3.0",
+            "keywords": [
+                "bootstrap",
+                "cakephp"
+            ],
+            "time": "2018-05-11T12:46:18+00:00"
         },
         {
             "name": "josegonzalez/dotenv",
@@ -340,7 +382,7 @@
                 "dotenv",
                 "php"
             ],
-            "time": "2017-09-19 15:49:58"
+            "time": "2017-09-19T15:49:58+00:00"
         },
         {
             "name": "m1/env",
@@ -398,7 +440,7 @@
                 "parser",
                 "support"
             ],
-            "time": "2018-06-19 18:55:08"
+            "time": "2018-06-19T18:55:08+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -450,7 +492,7 @@
                 "mobile detector",
                 "php mobile detect"
             ],
-            "time": "2018-06-03 13:13:04"
+            "time": "2018-06-03T13:13:04+00:00"
         },
         {
             "name": "psr/http-message",
@@ -500,7 +542,7 @@
                 "request",
                 "response"
             ],
-            "time": "2016-08-06 14:39:51"
+            "time": "2016-08-06T14:39:51+00:00"
         },
         {
             "name": "psr/log",
@@ -547,7 +589,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10 12:19:37"
+            "time": "2016-10-10T12:19:37+00:00"
         },
         {
             "name": "robmorgan/phinx",
@@ -621,7 +663,7 @@
                 "migrations",
                 "phinx"
             ],
-            "time": "2018-07-12 11:55:13"
+            "time": "2018-07-12T11:55:13+00:00"
         },
         {
             "name": "symfony/config",
@@ -684,7 +726,7 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26 11:24:31"
+            "time": "2018-07-26T11:24:31+00:00"
         },
         {
             "name": "symfony/console",
@@ -752,7 +794,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26 11:24:31"
+            "time": "2018-07-26T11:24:31+00:00"
         },
         {
             "name": "symfony/filesystem",
@@ -802,7 +844,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26 11:24:31"
+            "time": "2018-07-26T11:24:31+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -857,7 +899,7 @@
                 "polyfill",
                 "portable"
             ],
-            "time": "2018-04-30 19:57:29"
+            "time": "2018-04-30T19:57:29+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -916,7 +958,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-04-26 10:06:28"
+            "time": "2018-04-26T10:06:28+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -975,7 +1017,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26 11:24:31"
+            "time": "2018-07-26T11:24:31+00:00"
         },
         {
             "name": "zendframework/zend-diactoros",
@@ -1038,7 +1080,7 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2018-08-01 13:47:49"
+            "time": "2018-08-01T13:47:49+00:00"
         }
     ],
     "packages-dev": [
@@ -1100,7 +1142,7 @@
                 "breakpoint",
                 "twig"
             ],
-            "time": "2017-11-20 13:04:11"
+            "time": "2017-11-20T13:04:11+00:00"
         },
         {
             "name": "aptoma/twig-markdown",
@@ -1157,7 +1199,7 @@
                 "markdown",
                 "twig"
             ],
-            "time": "2015-10-23 20:27:08"
+            "time": "2015-10-23T20:27:08+00:00"
         },
         {
             "name": "asm89/twig-cache-extension",
@@ -1211,7 +1253,7 @@
                 "extension",
                 "twig"
             ],
-            "time": "2017-01-10 22:04:15"
+            "time": "2017-01-10T22:04:15+00:00"
         },
         {
             "name": "cakephp/bake",
@@ -1259,7 +1301,7 @@
                 "bake",
                 "cakephp"
             ],
-            "time": "2018-07-22 01:25:56"
+            "time": "2018-07-22T01:25:56+00:00"
         },
         {
             "name": "cakephp/cakephp-codesniffer",
@@ -1304,7 +1346,7 @@
                 "codesniffer",
                 "framework"
             ],
-            "time": "2018-06-09 16:01:01"
+            "time": "2018-06-09T16:01:01+00:00"
         },
         {
             "name": "cakephp/debug_kit",
@@ -1364,7 +1406,7 @@
                 "debug",
                 "kit"
             ],
-            "time": "2018-08-03 13:57:51"
+            "time": "2018-08-03T13:57:51+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -1420,7 +1462,7 @@
                 "ssl",
                 "tls"
             ],
-            "time": "2018-03-29 19:57:20"
+            "time": "2018-03-29T19:57:20+00:00"
         },
         {
             "name": "composer/composer",
@@ -1500,7 +1542,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2018-08-03 13:39:07"
+            "time": "2018-08-03T13:39:07+00:00"
         },
         {
             "name": "composer/semver",
@@ -1562,7 +1604,7 @@
                 "validation",
                 "versioning"
             ],
-            "time": "2016-08-30 16:08:34"
+            "time": "2016-08-30T16:08:34+00:00"
         },
         {
             "name": "composer/spdx-licenses",
@@ -1623,7 +1665,7 @@
                 "spdx",
                 "validator"
             ],
-            "time": "2018-04-30 10:33:04"
+            "time": "2018-04-30T10:33:04+00:00"
         },
         {
             "name": "composer/xdebug-handler",
@@ -1667,7 +1709,7 @@
                 "Xdebug",
                 "performance"
             ],
-            "time": "2018-04-11 15:42:36"
+            "time": "2018-04-11T15:42:36+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1700,7 +1742,7 @@
                 "MIT"
             ],
             "description": "implementation of xdg base directory specification for php",
-            "time": "2014-10-24 07:27:01"
+            "time": "2014-10-24T07:27:01+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -1743,7 +1785,7 @@
                     "homepage": "http://www.acci.cz"
                 }
             ],
-            "time": "2014-04-08 15:00:19"
+            "time": "2014-04-08T15:00:19+00:00"
         },
         {
             "name": "jakub-onderka/php-console-highlighter",
@@ -1787,7 +1829,7 @@
                     "homepage": "http://www.acci.cz/"
                 }
             ],
-            "time": "2015-04-20 18:58:01"
+            "time": "2015-04-20T18:58:01+00:00"
         },
         {
             "name": "jasny/twig-extensions",
@@ -1847,7 +1889,7 @@
                 "text",
                 "time"
             ],
-            "time": "2017-09-13 07:38:01"
+            "time": "2017-09-13T07:38:01+00:00"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -1897,7 +1939,7 @@
                 "highlight",
                 "sql"
             ],
-            "time": "2014-01-12 16:20:24"
+            "time": "2014-01-12T16:20:24+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -1963,7 +2005,7 @@
                 "json",
                 "schema"
             ],
-            "time": "2018-02-14 22:26:30"
+            "time": "2018-02-14T22:26:30+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -2014,7 +2056,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2018-07-15 17:25:16"
+            "time": "2018-07-15T17:25:16+00:00"
         },
         {
             "name": "psy/psysh",
@@ -2086,7 +2128,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2018-06-10 17:57:20"
+            "time": "2018-06-10T17:57:20+00:00"
         },
         {
             "name": "seld/jsonlint",
@@ -2135,7 +2177,7 @@
                 "parser",
                 "validator"
             ],
-            "time": "2018-01-24 12:46:19"
+            "time": "2018-01-24T12:46:19+00:00"
         },
         {
             "name": "seld/phar-utils",
@@ -2179,7 +2221,7 @@
             "keywords": [
                 "phra"
             ],
-            "time": "2015-10-13 18:44:15"
+            "time": "2015-10-13T18:44:15+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -2230,7 +2272,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2018-07-26 23:47:18"
+            "time": "2018-07-26T23:47:18+00:00"
         },
         {
             "name": "symfony/finder",
@@ -2279,7 +2321,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26 11:24:31"
+            "time": "2018-07-26T11:24:31+00:00"
         },
         {
             "name": "symfony/polyfill-php72",
@@ -2334,7 +2376,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-04-26 10:06:28"
+            "time": "2018-04-26T10:06:28+00:00"
         },
         {
             "name": "symfony/process",
@@ -2383,7 +2425,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26 11:24:31"
+            "time": "2018-07-26T11:24:31+00:00"
         },
         {
             "name": "symfony/var-dumper",
@@ -2458,7 +2500,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2018-07-26 11:24:31"
+            "time": "2018-07-26T11:24:31+00:00"
         },
         {
             "name": "twig/twig",
@@ -2524,7 +2566,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2018-07-13 07:12:17"
+            "time": "2018-07-13T07:12:17+00:00"
         },
         {
             "name": "umpirsky/twig-php-function",
@@ -2565,7 +2607,7 @@
                 }
             ],
             "description": "Call (almost) any PHP function from your Twig templates.",
-            "time": "2016-03-12 16:36:32"
+            "time": "2016-03-12T16:36:32+00:00"
         },
         {
             "name": "wyrihaximus/twig-view",
@@ -2623,12 +2665,13 @@
                 "twig",
                 "view"
             ],
-            "time": "2018-07-03 15:46:29"
+            "time": "2018-07-03T15:46:29+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "holt59/cakephp3-bootstrap-helpers": 20,
         "psy/psysh": 0
     },
     "prefer-stable": true,

@@ -79,7 +79,30 @@ class AppController extends Controller
          * see https://book.cakephp.org/3.0/en/controllers/components/security.html
          */
         //$this->loadComponent('Security');
+
     }
+
+    //Chargement des helpers Bootstrap
+    public $helpers = [
+        'Form' => [
+            'className' => 'Bootstrap.Form'
+        ],
+        'Html' => [
+            'className' => 'Bootstrap.Html'
+        ],
+        'Modal' => [
+            'className' => 'Bootstrap.Modal'
+        ],
+        'Navbar' => [
+            'className' => 'Bootstrap.Navbar'
+        ],
+        'Paginator' => [
+            'className' => 'Bootstrap.Paginator'
+        ],
+        'Panel' => [
+            'className' => 'Bootstrap.Panel'
+        ]
+    ];
 
     public function isAuthorized($user) {
         // By default deny access.
