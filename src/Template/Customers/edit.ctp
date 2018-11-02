@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Customer $customer
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<nav class="large-2 medium-3 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
@@ -20,7 +20,7 @@
         <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="customers form large-9 medium-8 columns content">
+<div class="customers form large-10 medium-9 columns content">
     <?= $this->Form->create($customer) ?>
     <fieldset>
         <legend><?= __('Edit Customer') ?></legend>

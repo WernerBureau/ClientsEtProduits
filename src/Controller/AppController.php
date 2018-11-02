@@ -94,7 +94,8 @@ class AppController extends Controller
             'className' => 'Bootstrap.Modal'
         ],
         'Navbar' => [
-            'className' => 'Bootstrap.Navbar'
+            'className' => 'Bootstrap.Navbar',
+            'autoActiveLink' => true
         ],
         'Paginator' => [
             'className' => 'Bootstrap.Paginator'

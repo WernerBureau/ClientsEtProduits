@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Customer[]|\Cake\Collection\CollectionInterface $customers
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<nav class="large-2 medium-3 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Customer'), ['action' => 'add']) ?></li>
@@ -19,7 +19,7 @@
         <li><?= $this->Html->link(__('Add Files'), ['controller' => 'Files', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-    <div class="customers index large-9 medium-8 columns content">
+    <div class="customers index large-10 medium-9 columns content">
         <h3><?= __('About') ?></h3>
         <h4><?= __('Infos') ?></h4>
         <ul>

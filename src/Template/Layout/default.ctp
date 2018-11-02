@@ -15,10 +15,11 @@
 
 
 //Ajout des scripts Bootstrap et jquery
-echo $this->Html->css('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+echo $this->Html->css('https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css');
 echo $this->Html->script([
-    'https://code.jquery.com/jquery-1.12.4.min.js',
-    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'
+    'https://code.jquery.com/jquery-3.3.1.slim.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js',
+    'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'
 ]);
 
 $cakeDescription = 'Werner Burat - Clients et Produits';
@@ -42,67 +43,86 @@ $cakeDescription = 'Werner Burat - Clients et Produits';
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
-            <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
-            </li>
-        </ul>
 
-        <div class="top-bar-section">
-            <ul class="right">
-                <li>
-                    <?= $this->Html->link(__('Home'), ['controller' => 'Customers', 'action' => 'index']) ?>
+    <!-- Début navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"><?= $this->fetch('title') ?></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Boutons de gauche -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <?= $this->Html->link(__('Home'), ['controller' => 'Customers', 'action' => 'index'], ['class' => 'nav-link']) ?>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <?= $this->Html->link(__('Customers'), ['controller' => 'Customers', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+                        <?= $this->Html->link(__('Customer orders'), ['controller' => 'CustomerOrders', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+                        <?= $this->Html->link(__('Products'), ['controller' => 'Products', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+                        <?= $this->Html->link(__('Product types'), ['controller' => 'ProductTypes', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+                        <div class="dropdown-divider"></div>
+                        <?= $this->Html->link(__('About'), ['controller' => 'Users', 'action' => 'about'], ['class' => 'dropdown-item']) ?>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- Boutons de droite -->
+            <ul class="navbar-nav ml-auto">
+                <?php $loguser = $this->request->session()->read('Auth.User');?>
+
+                <?php if ($loguser):
+                    $user = $loguser['email'];
+                    $role = $loguser['role'];
+                    $emailaddress = $loguser['email'];
+                    $uuidparam = $loguser['uuid']; ?>
+
+                    <?php if ($role === 1): ?>
+                        <li class="nav-item">
+                            <?= $this->Html->link(__('Please validate your account. Click to resend confirmation email.'),
+                                ['controller' => 'emails', 'action' => 'index', '?'=>['email'=>$emailaddress, 'uuid'=>$uuidparam]],
+                                ['class' => 'nav-link']); ?>
+                        </li>
+                    <?php endif;?>
+
+                    <li class="nav-item">
+                        <?= $this->Html->link(($user), ['controller' => 'Users', 'action' => 'view', $loguser['id']], ['class' => 'nav-link']);?>
+                    </li>
+
+                    <li class="nav-item">
+                        <?= $this->Html->link(__(' Logout '), ['controller' => 'Users', 'action' => 'logout'], ['class' => 'nav-link']);?>
+                    </li>
+
+                <?php else: ?>
+                <li class="nav-item">
+                    <?= $this->Html->link(__(' Login '), ['controller' => 'Users', 'action' => 'logout'], ['class' => 'nav-link']);?>
                 </li>
 
-            <?php
-            $loguser = $this->request->session()->read('Auth.User');
-             if ($loguser) {
-                $user = $loguser['email'];
-                $role = $loguser['role'];
-                $emailaddress = $loguser['email'];
-                $uuidparam = $loguser['uuid'];
+                <?php endif;?>
 
-                if ($role === 1){
-                    echo '<li>';
-                    echo $this->Html->link(__('Please validate your account. Click to resend confirmation email.'), ['controller' => 'emails', 'action' => 'index', '?'=>['email'=>$emailaddress, 'uuid'=>$uuidparam]]);
-                    echo '</li>';
-                }
+                <span class="border-right"></span>
 
-                 echo '<li>';
-                 echo $this->Html->link(($user), ['controller' => 'Users', 'action' => 'view', $loguser['id']]);
-                 echo '</li>';
+                <li class="nav-item">
+                    <?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['class' => 'nav-link'], ['escape' => false]); ?>
+                </li>
 
-                echo '<li>';
-                echo $this->Html->link(__(' logout '), ['controller' => 'Users', 'action' => 'logout']);
-                echo '</li>';
-            } else {
-                echo '<li>';
-                echo $this->Html->link(__('Login'), ['controller' => 'Users', 'action' => 'login']);
-                echo '</li>';
+                <li class="nav-item">
+                    <?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['class' => 'nav-link'], ['escape' => false]); ?>
+                </li>
 
-                 echo '<li>';
-                 echo $this->Html->link(__('Register'), ['controller' => 'Users', 'action' => 'add']);
-                 echo '</li>';
-            }
-            ?>
-            <li>
-                <?= $this->Html->link(__('About'), ['controller' => 'Users', 'action' => 'about']) ?>
-            </li>
-            <li>
-                <?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]) ?>
-            </li>
-            <li>
-                <?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false]) ?>
-            </li>
-
-            <li>
-                <?= $this->Html->link('Deutsch', ['action' => 'changeLang', 'de_DE'], ['escape' => false]) ?>
-            </li>
-
+                <li class="nav-item">
+                    <?= $this->Html->link('Deutsch', ['action' => 'changeLang', 'de_DE'], ['class' => 'nav-link'], ['escape' => false]); ?>
+                </li>
             </ul>
         </div>
     </nav>
+    <!-- Fin navbar Bootstrap -->
+
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
         <?= $this->fetch('content') ?>
