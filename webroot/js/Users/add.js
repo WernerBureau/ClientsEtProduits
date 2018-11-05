@@ -7,7 +7,7 @@ $(document).ready(function () {
                 url: urlToLinkedListFilter,
                 data: 'country_id=' + countryId,
                 success: function (provinces) {
-                    $select = $('#provinces-id');
+                    $select = $('#province-id');
                     $select.find('option').remove();
                     $.each(provinces, function (key, value)
                     {

@@ -25,6 +25,8 @@ use Cake\Routing\Route\DashedRoute;
 
 Router::extensions(['json', 'xml']);
 
+Router::prefix('Admin', function ($routes) { $routes->fallbacks('InflectedRoute'); });
+
 //Emails
 Router::defaultRouteClass(DashedRoute::class);
 

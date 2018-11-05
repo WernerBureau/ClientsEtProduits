@@ -100,7 +100,6 @@ class ProductsTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->existsIn(['type_id'], 'product_types'));
 
         return $rules;
     }

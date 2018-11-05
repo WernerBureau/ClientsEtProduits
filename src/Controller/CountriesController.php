@@ -13,6 +13,12 @@ use App\Controller\AppController;
 class CountriesController extends AppController
 {
 
+    public function initialize() {
+        parent::initialize();
+        $this->Auth->allow(['findCountries']);
+    }
+
+
     /**
      * Index method
      *
@@ -24,6 +30,8 @@ class CountriesController extends AppController
 
         $this->set(compact('countries'));
     }
+
+
 
     /**
      * View method

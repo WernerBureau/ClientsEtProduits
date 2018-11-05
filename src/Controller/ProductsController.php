@@ -14,6 +14,7 @@ class ProductsController extends AppController
 
     public function initialize() {
         parent::initialize();
+        $this->Auth->allow(['autocomplete', 'findTypes']);
     }
 
     public function isAuthorized($user) {
@@ -47,6 +48,27 @@ class ProductsController extends AppController
                 return true;
             }
         }
+    }
+
+    public function findTypes(){
+        if ($this->request->is('ajax')) {
+
+            $this->autoRender = false;
+            $name = $this->request->query['term'];
+            $results = $this->Products->Product_Types->find('all', array(
+                'conditions' => array('Product_Types.type LIKE ' => '%' . $name . '%')
+            ));
+
+            $resultArr = array();
+            foreach ($results as $result) {
+                $resultArr[] = array('label' => $result['type'], 'value' => $result['type']);
+            }
+            echo json_encode($resultArr);
+        }
+    }
+
+    public function autocomplete() {
+
     }
 
     /**
@@ -89,6 +111,21 @@ class ProductsController extends AppController
             $product = $this->Products->patchEntity($product, $this->request->getData());
 
             $product->user_id = $this->Auth->user('id');
+
+            $typeName = $this->request->getData('type_id');
+            $type = $this->Products->Product_Types->findByType($typeName)->first();
+
+            if ($type == null){
+                $newType = $this->Products->Product_Types->newEntity();
+                $newType = $this->Products->Product_Types->patchEntity($newType, $this->request->getData());
+                $newType->type = $typeName;
+                $this->Products->Product_Types->save($newType);
+
+                $type = $newType;
+            }
+
+            $product->type_id = $type['id'];
+
             if ($this->Products->save($product)) {
                 $this->Flash->success(__('The product has been saved.'));
 
@@ -98,9 +135,10 @@ class ProductsController extends AppController
         }
 
         $types = $this->Products->Product_Types->find('list');
+
         $files = $this->Products->files->find('list');
 
-        $this->set(compact('product', 'types', 'files'));
+        $this->set(compact('product'  ,'types', 'files'));
     }
 
     /**

@@ -1,4 +1,14 @@
 <?php
+$urlToLinkedListFilter = $this->Url->build([
+    "controller" => "Provinces",
+    "action" => "getByCountry",
+    "_ext" => "json"
+]);
+echo $this->Html->scriptBlock('var urlToLinkedListFilter = "' . $urlToLinkedListFilter . '";', ['block' => true]);
+echo $this->Html->script('Users/add', ['block' => 'scriptBottom']);
+?>
+
+<?php
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\User $user
@@ -23,6 +33,9 @@
         <?php
             echo $this->Form->control('email');
             echo $this->Form->control('password');
+
+        echo $this->Form->control('country_id', ['options' => $countries]);
+        echo $this->Form->control('province_id', ['options' => $provinces]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

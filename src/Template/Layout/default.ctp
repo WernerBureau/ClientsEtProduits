@@ -96,7 +96,8 @@ $cakeDescription = 'Werner Burat - Clients et Produits';
             <!-- Boutons de droite -->
             <ul class="navbar-nav ml-auto">
 
-                <?php if ($role === 1): ?>
+
+                <?php if ($loguser && $role === 1): ?>
                     <li class="nav-item">
                         <?= $this->Html->link(__('Please validate your account. Click to resend confirmation email.'),
                             ['controller' => 'emails', 'action' => 'index', '?'=>['email'=>$emailaddress, 'uuid'=>$uuidparam]],
