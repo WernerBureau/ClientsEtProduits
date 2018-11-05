@@ -23,6 +23,7 @@ use Cake\Routing\RouteBuilder;
 use Cake\Routing\Router;
 use Cake\Routing\Route\DashedRoute;
 
+Router::extensions(['json', 'xml']);
 
 //Emails
 Router::defaultRouteClass(DashedRoute::class);

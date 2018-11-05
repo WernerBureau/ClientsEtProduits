@@ -143,8 +143,24 @@ class UsersController extends AppController
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
 
+
+        // Bâtir la liste des pays
+        $this->loadModel('Countries');
+        $countries = $this->Countries->find('list', ['limit' => 200]);
+
+        // Extraire le id du premier pays
+        $countries = $countries->toArray();
+        reset($countries);
+        $country_id = key($countries);
+
+        // Bâtir la liste des provinces reliées à cette catégorie
+        $provinces = $this->Countries->Provinces->find('list', [
+            'conditions' => ['Provinces.country_id' => $country_id],
+        ]);
+
+
         $uuid = Text::uuid();
-        $this->set(compact('user', 'uuid'));
+        $this->set(compact('user', 'uuid', 'countries', 'provinces'));
     }
 
     /**

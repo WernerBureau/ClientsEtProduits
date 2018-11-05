@@ -41,9 +41,17 @@ $cakeDescription = 'Werner Burat - Clients et Produits';
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
+
+    <?php
+    echo $this->Html->script([
+        'https://code.jquery.com/jquery-1.12.4.js',
+        'https://code.jquery.com/ui/1.12.1/jquery-ui.js'
+    ], ['block' => 'scriptLibraries']
+    );
+    ?>
+
 </head>
 <body>
-
     <?php $loguser = $this->request->session()->read('Auth.User');?>
 
     <?php if ($loguser):
@@ -135,5 +143,8 @@ $cakeDescription = 'Werner Burat - Clients et Produits';
     </div>
     <footer>
     </footer>
+    <?= $this->fetch('scriptLibraries') ?>
+    <?= $this->fetch('script'); ?>
+    <?= $this->fetch('scriptBottom') ?>
 </body>
 </html>

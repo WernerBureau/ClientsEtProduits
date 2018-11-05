@@ -1,11 +1,11 @@
 <?php
 $urlToLinkedListFilter = $this->Url->build([
-    "controller" => "Subcategories",
-    "action" => "getByCategory",
+    "controller" => "Provinces",
+    "action" => "getByCountry",
     "_ext" => "json"
 ]);
 echo $this->Html->scriptBlock('var urlToLinkedListFilter = "' . $urlToLinkedListFilter . '";', ['block' => true]);
-echo $this->Html->script('Articles/add', ['block' => 'scriptBottom']);
+echo $this->Html->script('Users/add', ['block' => 'scriptBottom']);
 ?>
 
 
