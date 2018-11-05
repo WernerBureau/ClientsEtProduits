@@ -44,6 +44,15 @@ $cakeDescription = 'Werner Burat - Clients et Produits';
 </head>
 <body>
 
+    <?php $loguser = $this->request->session()->read('Auth.User');?>
+
+    <?php if ($loguser):
+    $user = $loguser['email'];
+    $role = $loguser['role'];
+    $emailaddress = $loguser['email'];
+    $uuidparam = $loguser['uuid'];
+    endif;?>
+
     <!-- Début navbar Bootstrap -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#"><?= $this->fetch('title') ?></a>
@@ -66,6 +75,10 @@ $cakeDescription = 'Werner Burat - Clients et Produits';
                         <?= $this->Html->link(__('Customer orders'), ['controller' => 'CustomerOrders', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
                         <?= $this->Html->link(__('Products'), ['controller' => 'Products', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
                         <?= $this->Html->link(__('Product types'), ['controller' => 'ProductTypes', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+                        <?= $this->Html->link(__('Files'), ['controller' => 'Files', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+                        <?php if ($role === 3): ?>
+                            <?= $this->Html->link(__('Users'), ['controller' => 'Users', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+                        <?php endif;?>
                         <div class="dropdown-divider"></div>
                         <?= $this->Html->link(__('About'), ['controller' => 'Users', 'action' => 'about'], ['class' => 'dropdown-item']) ?>
                     </div>
@@ -74,22 +87,15 @@ $cakeDescription = 'Werner Burat - Clients et Produits';
 
             <!-- Boutons de droite -->
             <ul class="navbar-nav ml-auto">
-                <?php $loguser = $this->request->session()->read('Auth.User');?>
 
-                <?php if ($loguser):
-                    $user = $loguser['email'];
-                    $role = $loguser['role'];
-                    $emailaddress = $loguser['email'];
-                    $uuidparam = $loguser['uuid']; ?>
-
-                    <?php if ($role === 1): ?>
-                        <li class="nav-item">
-                            <?= $this->Html->link(__('Please validate your account. Click to resend confirmation email.'),
-                                ['controller' => 'emails', 'action' => 'index', '?'=>['email'=>$emailaddress, 'uuid'=>$uuidparam]],
-                                ['class' => 'nav-link']); ?>
-                        </li>
-                    <?php endif;?>
-
+                <?php if ($role === 1): ?>
+                    <li class="nav-item">
+                        <?= $this->Html->link(__('Please validate your account. Click to resend confirmation email.'),
+                            ['controller' => 'emails', 'action' => 'index', '?'=>['email'=>$emailaddress, 'uuid'=>$uuidparam]],
+                            ['class' => 'nav-link']); ?>
+                    </li>
+                <?php endif;?>
+                <?php if ($loguser): ?>
                     <li class="nav-item">
                         <?= $this->Html->link(($user), ['controller' => 'Users', 'action' => 'view', $loguser['id']], ['class' => 'nav-link']);?>
                     </li>
