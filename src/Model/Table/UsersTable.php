@@ -38,6 +38,11 @@ class UsersTable extends Table
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
+
+        $this->belongsTo('Provinces', [
+            'foreignKey' => 'province_id',
+            'joinType' => 'INNER'
+        ]);
     }
 
     /**
@@ -63,6 +68,10 @@ class UsersTable extends Table
             ->maxLength('password', 255)
             ->requirePresence('password', 'create')
             ->notEmpty('password');
+
+        $validator
+            ->integer('province_id')
+            ->notEmpty('province_id');
 
         $validator
             ->integer('role')

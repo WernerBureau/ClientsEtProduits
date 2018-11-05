@@ -39,6 +39,11 @@
             <?php } ?>
         </tr>
         <tr>
+            <th scope="row"><?= __('Region') ?></th>
+            <td><?= h($user->Provinces['name']) ?></td>
+        </tr>
+
+        <tr>
             <th scope="row"><?= __('Created') ?></th>
             <td><?= h($user->created) ?></td>
         </tr>
