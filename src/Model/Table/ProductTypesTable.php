@@ -39,6 +39,12 @@ class ProductTypesTable extends Table
         $this->setDisplayField('type');
         $this->setPrimaryKey('id');
 
+        $this->hasMany('Products', [
+            'foreignKey' => 'type_id',
+            'dependent' => true,
+            'cascadeCallbacks' => true,
+        ]);
+
         $this->addBehavior('Timestamp');
     }
 

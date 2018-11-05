@@ -132,6 +132,9 @@ class ProductTypesController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $productType = $this->ProductTypes->get($id);
         if ($this->ProductTypes->delete($productType)) {
+
+
+
             $this->Flash->success(__('The product type has been deleted.'));
         } else {
             $this->Flash->error(__('The product type could not be deleted. Please, try again.'));
