@@ -84,7 +84,7 @@ $cakeDescription = 'Werner Burat - Clients et Produits';
                         <?= $this->Html->link(__('Products'), ['controller' => 'Products', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
                         <?= $this->Html->link(__('Product types'), ['controller' => 'ProductTypes', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
                         <?= $this->Html->link(__('Files'), ['controller' => 'Files', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
-                        <?php if ($role === 3): ?>
+                        <?php if ($loguser && $role === 3): ?>
                             <?= $this->Html->link(__('Users'), ['controller' => 'Users', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
                         <?php endif;?>
                         <div class="dropdown-divider"></div>
