@@ -10,7 +10,6 @@ use Cake\Validation\Validator;
  * Customers Model
  *
  * @property \App\Model\Table\CustomerOrdersTable|\Cake\ORM\Association\HasMany $CustomerOrders
- * @property \App\Model\Table\UsersTable|\Cake\ORM\Association\HasMany $Users
  *
  * @method \App\Model\Entity\Customer get($primaryKey, $options = [])
  * @method \App\Model\Entity\Customer newEntity($data = null, array $options = [])
@@ -45,9 +44,6 @@ class CustomersTable extends Table
         $this->hasMany('CustomerOrders', [
             'foreignKey' => 'customer_id'
         ]);
-        $this->hasMany('Users', [
-            'foreignKey' => 'customer_id'
-        ]);
     }
 
     /**
@@ -64,27 +60,23 @@ class CustomersTable extends Table
 
         $validator
             ->scalar('number')
-            ->maxLength('number', 255)
-            ->requirePresence('number', 'create')
-            ->notEmpty('number')
-            ->add('number', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
+            ->allowEmpty('number');
 
         $validator
             ->scalar('name')
-            ->maxLength('name', 255)
             ->requirePresence('name', 'create')
             ->notEmpty('name');
 
         $validator
             ->scalar('phone')
-            ->maxLength('phone', 255)
             ->requirePresence('phone', 'create')
             ->notEmpty('phone');
 
         $validator
             ->email('email')
             ->requirePresence('email', 'create')
-            ->notEmpty('email');
+            ->notEmpty('email')
+            ->add('email', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
         return $validator;
     }

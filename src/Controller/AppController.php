@@ -38,6 +38,22 @@ class AppController extends Controller
      *
      * @return void
      */
+    use \Crud\Controller\ControllerTrait;
+
+        public $components = [
+            'RequestHandler',
+            'Crud.Crud' => [
+                'actions' => [
+                    'Crud.Index',
+                    'Crud.View',
+                    'Crud.Add',
+                    'Crud.Edit',
+                    'Crud.Delete'
+                ]
+            ]
+        ];
+
+
     public function initialize()
     {
         parent::initialize();
@@ -70,7 +86,7 @@ class AppController extends Controller
 
         // Allow the display action so our PagesController
         // continues to work. Also enable the read only actions.
-        $this->Auth->allow(['display', 'index', 'changelang', 'about']);
+        $this->Auth->allow(['display', 'index', 'changelang', 'about', 'view']);
 
         $this->Auth->user('role');
 
