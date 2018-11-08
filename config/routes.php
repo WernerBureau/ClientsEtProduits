@@ -31,6 +31,11 @@ Router::prefix('Admin', function ($routes) { $routes->fallbacks('InflectedRoute'
 //Emails
 Router::defaultRouteClass(DashedRoute::class);
 
+Router::prefix('api', function ($routes) {
+    $routes->extensions(['json', 'xml']);
+    $routes->resources('Customers');
+});
+
 Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/email',['controller'=>'Emails','action'=>'index']);
     $routes->fallbacks('DashedRoute');
