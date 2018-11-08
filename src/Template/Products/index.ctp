@@ -39,6 +39,7 @@
                 <td><?= h($product->modified) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $product->id]) ?>
+                    <?= $this->Html->link('(pdf)', ['action' => 'view', $product->id . '.pdf']) ?>
                     <?php if ($this->request->getSession()->read('Auth.User.role') >= 2){ ?>
                     <?php } ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $product->id]) ?>
