@@ -19,26 +19,15 @@ and open the template in the editor.
         <div class="container">
             <div class="row">
                 <div class="panel panel-default customers-content">
-                    <div class="panel-heading">Customers <a href="javascript:void(0);" class="glyphicon glyphicon-plus" id="addLink" onclick="javascript:$('#addForm').slideToggle();">Add</a></div>
+                    <div class="panel-heading">Customers <a href="javascript:void(0);" id="addLink" class="pull-right" onclick="javascript:$('#addForm').slideToggle();"><i class="glyphicon glyphicon-plus"></i>Add</a></div>
                     <div class="panel-body none formData" id="addForm">
-                        <h2 id="actionLabel">Add Customer</h2>
+                        <h2 id="actionLabel"><?= __('Add Customer') ?></h2>
                         <form class="form" id="customerAddForm" enctype='application/json'>
-                            <div class="form-group">
-                                <label>Name</label>
-                                <input type="text" class="form-control" name="name" id="name"/>
-                            </div>
-                            <div class="form-group">
-                                <label>Email</label>
-                                <input type="text" class="form-control" name="email" id="email"/>
-                            </div>
-                            <div class="form-group">
-                                <label>Number</label>
-                                <input type="text" class="form-control" name="number" id="number"/>
-                            </div>
-                            <div class="form-group">
-                                <label>Phone</label>
-                                <input type="text" class="form-control" name="phone" id="phone"/>
-                            </div>
+                            <?=$this->Form->control('name'); ?>
+                            <?=$this->Form->control('email'); ?>
+
+
+                            <?=$this->Form->control('phone'); ?>
                             <a href="javascript:void(0);" class="btn btn-warning" onclick="$('#addForm').slideUp();">Cancel</a>
                             <a href="javascript:void(0);" class="btn btn-success" onclick="customerAction('add')">Add Customer</a>
                         </form>
@@ -46,22 +35,11 @@ and open the template in the editor.
                     <div class="panel-body none formData" id="editForm">
                         <h2 id="actionLabel">Edit Customer</h2>
                         <form class="form" id="customerEditForm" enctype='application/json'>
-                            <div class="form-group">
-                                <label>Name</label>
-                                <input type="text" class="form-control" name="name" id="nameEdit"/>
-                            </div>
-                            <div class="form-group">
-                                <label>Email</label>
-                                <input type="text" class="form-control" name="email" id="emailEdit"/>
-                            </div>
-                            <div class="form-group">
-                                <label>Number</label>
-                                <input type="text" class="form-control" name="number" id="numberEdit"/>
-                            </div>
-                            <div class="form-group">
-                                <label>Phone</label>
-                                <input type="text" class="form-control" name="phone" id="phoneEdit"/>
-                            </div>
+                            <?=$this->Form->control('name', ['id' => 'nameEdit']); ?>
+                            <?=$this->Form->control('email', ['id' => 'emailEdit']); ?>
+                            <?=$this->Form->control('number', ['id' => 'numberEdit', 'disabled' => 'disabled']); ?>
+                            <?=$this->Form->control('phone', ['id' => 'phoneEdit']); ?>
+
                             <input type="hidden" class="form-control" name="id" id="idEdit"/>
                             <a href="javascript:void(0);" class="btn btn-warning" onclick="$('#editForm').slideUp();">Cancel</a>
                             <a href="javascript:void(0);" class="btn btn-success" onclick="customerAction('edit')">Update Customer</a>

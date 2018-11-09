@@ -94,7 +94,7 @@ $cakeDescription = 'Werner Burat - Clients et Produits';
             </ul>
 
             <!-- Boutons de droite -->
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto navbar-right">
 
 
                 <?php if ($loguser && $role === 1): ?>

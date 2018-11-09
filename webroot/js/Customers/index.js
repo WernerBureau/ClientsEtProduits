@@ -14,7 +14,7 @@ function getCustomers() {
                         '<a href="javascript:void(0);" class="glyphicon glyphicon-edit" onclick="editCustomer(' + value.id + ')"></a>' +
                         '<a href="javascript:void(0);" class="glyphicon glyphicon-trash" onclick="return confirm(\'Are you sure to delete data?\') ? customerAction(\'delete\', ' + value.id + ') : false;"></a>' +
                         '</td></tr>';
-                    customerTable.append('<tr><td>' + count + '</td><td>' + value.name + '</td><td>' + value.email + '</td><td>' + value.number + '</td><td>' + value.phone + '</td>' + editDeleteButtons);
+                    customerTable.append('<tr><td>' + '#' + count + '</td><td>' + value.name + '</td><td>' + value.email + '</td><td>' + value.number + '</td><td>' + value.phone + '</td>' + editDeleteButtons);
                     count++;
                 });
 

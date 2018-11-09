@@ -46,6 +46,21 @@ class CustomersTable extends Table
         ]);
     }
 
+    public function beforeSave($event, $entity, $options){
+        if($entity->isNew()){
+            $entity->number = $this->generateNumber();
+        }
+        return true;
+    }
+
+    public function generateNumber(){
+        $number = 0;
+
+
+
+        return $number;
+    }
+
     /**
      * Default validation rules.
      *
