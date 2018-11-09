@@ -4,6 +4,7 @@ namespace App\Model\Table;
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
+use Cake\ORM\TableRegistry;
 use Cake\Validation\Validator;
 
 /**
@@ -54,11 +55,12 @@ class CustomersTable extends Table
     }
 
     public function generateNumber(){
-        $number = 0;
+        $customers = TableRegistry::get('Customers');
 
+        $customer = $customers->find('all')->where(['number = (SELECT MAX(number) from Customers)'])->first();
+        $number = $customer['number'];
 
-
-        return $number;
+        return $number + 1;
     }
 
     /**

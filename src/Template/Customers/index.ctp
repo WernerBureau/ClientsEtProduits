@@ -19,21 +19,19 @@ and open the template in the editor.
         <div class="container">
             <div class="row">
                 <div class="panel panel-default customers-content">
-                    <div class="panel-heading">Customers <a href="javascript:void(0);" id="addLink" class="pull-right" onclick="javascript:$('#addForm').slideToggle();"><i class="glyphicon glyphicon-plus"></i>Add</a></div>
+                    <div class="panel-heading"><?= __('Customers ') ?> <a href="javascript:void(0);" id="addLink" class="pull-right" onclick="javascript:$('#addForm').slideToggle();"><i class="glyphicon glyphicon-plus"></i>Add</a></div>
                     <div class="panel-body none formData" id="addForm">
                         <h2 id="actionLabel"><?= __('Add Customer') ?></h2>
                         <form class="form" id="customerAddForm" enctype='application/json'>
                             <?=$this->Form->control('name'); ?>
                             <?=$this->Form->control('email'); ?>
-
-
                             <?=$this->Form->control('phone'); ?>
                             <a href="javascript:void(0);" class="btn btn-warning" onclick="$('#addForm').slideUp();">Cancel</a>
-                            <a href="javascript:void(0);" class="btn btn-success" onclick="customerAction('add')">Add Customer</a>
+                            <a href="javascript:void(0);" class="btn btn-success" onclick="customerAction('add')"><?= __('Add Customer') ?></a>
                         </form>
                     </div>
                     <div class="panel-body none formData" id="editForm">
-                        <h2 id="actionLabel">Edit Customer</h2>
+                        <h2 id="actionLabel"><?= __('Edit Customer') ?></h2>
                         <form class="form" id="customerEditForm" enctype='application/json'>
                             <?=$this->Form->control('name', ['id' => 'nameEdit']); ?>
                             <?=$this->Form->control('email', ['id' => 'emailEdit']); ?>
@@ -42,7 +40,7 @@ and open the template in the editor.
 
                             <input type="hidden" class="form-control" name="id" id="idEdit"/>
                             <a href="javascript:void(0);" class="btn btn-warning" onclick="$('#editForm').slideUp();">Cancel</a>
-                            <a href="javascript:void(0);" class="btn btn-success" onclick="customerAction('edit')">Update Customer</a>
+                            <a href="javascript:void(0);" class="btn btn-success" onclick="customerAction('edit')"><?= __('Update Customer') ?></a>
                         </form>
                     </div>
                     <table class="table table-striped">
