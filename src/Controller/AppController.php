@@ -98,28 +98,6 @@ class AppController extends Controller
 
     }
 
-    //Chargement des helpers Bootstrap
-    public $helpers = [
-        'Form' => [
-            'className' => 'Bootstrap.Form'
-        ],
-        'Html' => [
-            'className' => 'Bootstrap.Html'
-        ],
-        'Modal' => [
-            'className' => 'Bootstrap.Modal'
-        ],
-        'Navbar' => [
-            'className' => 'Bootstrap.Navbar',
-            'autoActiveLink' => true
-        ],
-        'Paginator' => [
-            'className' => 'Bootstrap.Paginator'
-        ],
-        'Panel' => [
-            'className' => 'Bootstrap.Panel'
-        ]
-    ];
 
     public function isAuthorized($user) {
         // By default deny access.

@@ -26,7 +26,7 @@ use Cake\Routing\Route\DashedRoute;
 Router::extensions(['json', 'xml', 'pdf']);
 
 
-Router::prefix('Admin', function ($routes) { $routes->fallbacks('InflectedRoute'); });
+
 
 //Emails
 Router::defaultRouteClass(DashedRoute::class);
@@ -34,6 +34,10 @@ Router::defaultRouteClass(DashedRoute::class);
 Router::prefix('api', function ($routes) {
     $routes->extensions(['json', 'xml']);
     $routes->resources('Customers');
+});
+
+Router::prefix('Admin', function ($routes) {
+    $routes->fallbacks('InflectedRoute');
 });
 
 Router::scope('/', function (RouteBuilder $routes) {
