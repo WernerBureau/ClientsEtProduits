@@ -41,9 +41,9 @@ class ProductsFixture extends TestFixture
             [
                 'id' => 1,
                 'type_id' => 1,
-                'name' => 'Lorem ipsum dolor sit amet',
+                'name' => 'Product name',
                 'price' => 1.5,
-                'description' => 'Lorem ipsum dolor sit amet',
+                'description' => 'Product Description',
                 'created' => '2018-10-04 17:13:48',
                 'modified' => '2018-10-04 17:13:48'
             ],

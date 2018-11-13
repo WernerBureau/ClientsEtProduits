@@ -78,7 +78,18 @@ class CustomersTableTest extends TestCase
      */
     public function testValidationDefault()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        $data = [
+            'id' => 3,
+            'number' => '100000002',
+            'name' => 'Customer Three',
+            'phone' => '3453453456',
+            'email' => 'thirdcustomer@email.com',
+            'created' => '2018-11-11 23:07:57',
+            'modified' => '2018-11-11 23:07:57'
+        ];
+
+        $customer = $this->Customers->newEntity($data);
+        $this->assertEmpty($customer->errors());
     }
 
     /**

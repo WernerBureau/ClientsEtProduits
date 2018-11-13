@@ -37,7 +37,7 @@ class ProductTypesFixture extends TestFixture
         $this->records = [
             [
                 'id' => 1,
-                'type' => 'Lorem ipsum dolor sit amet',
+                'type' => 'Pants',
                 'created' => '2018-10-04 17:09:29',
                 'modified' => '2018-10-04 17:09:29'
             ],
