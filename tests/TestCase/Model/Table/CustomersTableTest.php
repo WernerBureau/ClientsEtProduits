@@ -41,6 +41,14 @@ class CustomersTableTest extends TestCase
         $this->Customers = TableRegistry::getTableLocator()->get('Customers', $config);
     }
 
+    public function testGenerateNumber() {
+        $result = $this->Customers->generateNumber();
+        $expected = 100000002;
+
+        $this->assertEquals($expected, $result);
+    }
+
+
     /**
      * tearDown method
      *

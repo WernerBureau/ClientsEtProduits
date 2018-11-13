@@ -42,12 +42,21 @@ class CustomersFixture extends TestFixture
         $this->records = [
             [
                 'id' => 1,
-                'number' => 'Lorem ipsum dolor sit amet',
-                'name' => 'Lorem ipsum dolor sit amet',
-                'phone' => 'Lorem ipsum dolor sit amet',
-                'email' => 'Lorem ipsum dolor sit amet',
-                'created' => '2018-11-07 23:07:57',
-                'modified' => '2018-11-07 23:07:57'
+                'number' => '100000000',
+                'name' => 'Customer One',
+                'phone' => '1231231234',
+                'email' => 'firstcustomer@email.com',
+                'created' => '2018-11-11 23:07:57',
+                'modified' => '2018-11-11 23:07:57'
+            ],
+            [
+                'id' => 2,
+                'number' => '100000001',
+                'name' => 'Customer Two',
+                'phone' => '2342342345',
+                'email' => 'secondcustomer@email.com',
+                'created' => '2018-11-11 23:07:57',
+                'modified' => '2018-11-11 23:07:57'
             ],
         ];
         parent::init();
