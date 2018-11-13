@@ -1,7 +1,7 @@
 <?php
 namespace App\Controller\Admin;
 
-use App\Controller\AppController;
+use App\Controller\Admin\AppController;
 
 /**
  * Customers Controller
@@ -12,6 +12,12 @@ use App\Controller\AppController;
  */
 class CustomersController extends AppController
 {
+
+    public function initialize() {
+        parent::initialize();
+        // Use the Bootstrap layout from the plugin.
+        // $this->viewBuilder()->setLayout('admin');
+    }
 
     /**
      * Index method

@@ -4,22 +4,12 @@
  * @var \App\Model\Entity\Customer[]|\Cake\Collection\CollectionInterface $customers
  */
 ?>
-<nav class="large-2 medium-3 columns" id="actions-sidebar">
+<nav class="large-1 medium-2 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Customer'), ['action' => 'add']) ?></li>
-        <li><hr/></li>
-        <li><?= $this->Html->link(__('List Customer Orders'), ['controller' => 'CustomerOrders', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Customer Order'), ['controller' => 'CustomerOrders', 'action' => 'add']) ?></li>
-        <li><hr/></li>
-        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
-        <li><hr/></li>
-        <li><?= $this->Html->link(__('List Products'), ['controller' => 'Products', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('Add Files'), ['controller' => 'Files', 'action' => 'add']) ?></li>
+        <li class="heading"><?= __('') ?></li>
     </ul>
 </nav>
-    <div class="customers index large-10 medium-9 columns content">
+    <div class="customers index large-11 medium-10 columns content">
         <h3><?= __('About') ?></h3>
         <h4><?= __('Infos') ?></h4>
         <ul>
@@ -31,6 +21,10 @@
             </li>
             <li>
                 <?= ('Automne 2018, Collège Montmorency.') ?>
+            </li>
+
+            <li>
+                <?= $this->Html->link(__('Code coverage'), ['controller' => 'webroot/coverage', 'action' => 'index.html']) ?></li>
             </li>
         </ul>
         <h4><?= __('How to use this website') ?></h4>
@@ -51,6 +45,12 @@
             <li>
                 <?= __('If you want to add images to a product, you need to first add Files to the website 
                 in the Files menu and then you can choose it when creating the product. You can associate multiple images to the same product.') ?>
+            </li>
+            <li>
+                <?= __('The Customers page uses a Rest API for all CRUD actions, meaning the page fetches data in json from an internal API.') ?>
+            </li>
+            <li>
+                <?= __('You can generate .pdf files for products you are browsing.') ?>
             </li>
         </ul>
         <h4><?= __('Users') ?></h4>

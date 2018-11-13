@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Customer $customer
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<nav class="large-2 medium-3 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('List Customers'), ['action' => 'index']) ?></li>
@@ -17,7 +17,7 @@
     <fieldset>
         <legend><?= __('Add Customer') ?></legend>
         <?php
-            echo $this->Form->control('number');
+            echo $this->Form->control('number', ['disabled' => 'disabled']);
             echo $this->Form->control('name');
             echo $this->Form->control('phone');
             echo $this->Form->control('email');
