@@ -13,9 +13,11 @@ use App\Controller\AppController;
 class ProvincesController extends AppController
 {
 
+
+
     public function initialize() {
         parent::initialize();
-        $this->Auth->allow(['getByCountry']);
+        $this->Auth->allow(['getByCountry', 'getProvincesSortedByCountries']);
     }
 
     public function isAuthorized($user) {
@@ -31,6 +33,14 @@ class ProvincesController extends AppController
         ]);
         $this->set('provinces', $provinces);
         $this->set('_serialize', ['provinces']);
+    }
+
+    public function getProvincesSortedByCountries() {
+        $countries = $this->Provinces->Countries->find('all', [
+            'contain' => ['Provinces'],
+        ]);
+        $this->set('countries', $countries);
+        $this->set('_serialize', ['countries']);
     }
 
     /**

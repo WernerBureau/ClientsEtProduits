@@ -161,6 +161,7 @@ class UsersController extends AppController
 
         $uuid = Text::uuid();
         $this->set(compact('user', 'uuid', 'countries', 'provinces'));
+        $this->set('_serialize', ['user', 'countries', 'provinces', 'uuid']);
     }
 
     /**

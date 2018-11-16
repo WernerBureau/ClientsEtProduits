@@ -86,7 +86,7 @@ class AppController extends Controller
 
         // Allow the display action so our PagesController
         // continues to work. Also enable the read only actions.
-        $this->Auth->allow(['display', 'index', 'changelang', 'about', 'view']);
+        $this->Auth->allow(['display', 'index', 'changelang', 'about', 'view', 'getCountries']);
 
         $this->Auth->user('role');
 
@@ -102,6 +102,22 @@ class AppController extends Controller
     public function isAuthorized($user) {
         // By default deny access.
         return false;
+    }
+
+    public function beforeRender(Event $event) {
+        // Note: These defaults are just to get started quickly with development
+        // and should not be used in production. You should instead set "_serialize"
+        // in each action as required.
+        if (!array_key_exists('_serialize', $this->viewVars) &&
+            in_array($this->response->type(), ['application/json', 'application/xml'])
+        ) {
+            $this->set('_serialize', true);
+        }
+
+    }
+
+    public function beforeFilter(Event $event) {
+        $this->Auth->allow(['getCountries', 'getProvincesSortedByCountries']);
     }
 
     public function changeLang($lang = 'en_US') {

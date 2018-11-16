@@ -13,9 +13,17 @@ use App\Controller\AppController;
 class CountriesController extends AppController
 {
 
-    public function initialize() {
-        parent::initialize();
-        $this->Auth->allow(['findCountries']);
+    public function getCountries() {
+        $this->autoRender = false; // avoid to render view
+
+        $countries= $this->Countries->find('all', [
+            'contain' => ['Provinces'],
+        ]);
+
+        $countriesJ = json_encode($countries);
+        $this->response->type('json');
+        $this->response->body($countriesJ);
+
     }
 
 
@@ -29,6 +37,7 @@ class CountriesController extends AppController
         $countries = $this->paginate($this->Countries);
 
         $this->set(compact('countries'));
+        $this->set('_serialize', ['countries']);
     }
 
 
@@ -47,6 +56,7 @@ class CountriesController extends AppController
         ]);
 
         $this->set('country', $country);
+        $this->set('_serialize', ['country']);
     }
 
     /**
@@ -67,6 +77,7 @@ class CountriesController extends AppController
             $this->Flash->error(__('The country could not be saved. Please, try again.'));
         }
         $this->set(compact('country'));
+        $this->set('_serialize', ['country']);
     }
 
     /**
@@ -91,6 +102,7 @@ class CountriesController extends AppController
             $this->Flash->error(__('The country could not be saved. Please, try again.'));
         }
         $this->set(compact('country'));
+        $this->set('_serialize', ['country']);
     }
 
     /**
