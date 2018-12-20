@@ -56,9 +56,9 @@ $cakeDescription = 'Werner Burat - Clients et Produits';
     <?php $loguser = $this->request->session()->read('Auth.User');?>
 
     <?php if ($loguser):
-    $user = $loguser['email'];
+    $user = $loguser['username'];
     $role = $loguser['role'];
-    $emailaddress = $loguser['email'];
+    $emailaddress = $loguser['username'];
     $uuidparam = $loguser['uuid'];
     endif;?>
 

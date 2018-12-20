@@ -80,9 +80,9 @@ class UsersController extends AppController
                     $this->Flash->success('You are now logged in.');
                 }
 
-                return $this->redirect($this->Auth->redirectUrl());
+                return $this->redirect(['controller' => 'Customers','action' =>  'index']);
             }
-            $this->Flash->error('Your email or password is incorrect.');
+            $this->Flash->error('Your username or password is incorrect.');
         }
     }
 
@@ -136,7 +136,7 @@ class UsersController extends AppController
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
 
-                $emailaddress = $user->get('email');
+                $emailaddress = $user->get('username');
                 $uuidparam = $user->get('uuid');
                 return $this->redirect(['controller' => 'emails', 'action' => 'index', '?'=>['email'=>$emailaddress, 'uuid'=>$uuidparam]]);
             }

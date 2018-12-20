@@ -62,6 +62,7 @@ Configure::write('CakePdf', [
 ]);
 
 Plugin::load('CakePdf', ['bootstrap' => true]);
+Plugin::load('ADmad/JwtAuth');
 
 /**
  * Uncomment block of code below if you want to use `.env` file during development.

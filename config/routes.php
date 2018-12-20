@@ -23,17 +23,18 @@ use Cake\Routing\RouteBuilder;
 use Cake\Routing\Router;
 use Cake\Routing\Route\DashedRoute;
 
+Router::mapResources(['Customers']);
 Router::extensions(['json', 'xml', 'pdf']);
 
-
-
-
-//Emails
 Router::defaultRouteClass(DashedRoute::class);
 
 Router::prefix('api', function ($routes) {
     $routes->extensions(['json', 'xml']);
     $routes->resources('Customers');
+
+    $routes->resources('Users');
+    Router::connect('/api/users/register', ['controller' => 'Users', 'action' => 'add', 'prefix' => 'api']);
+    $routes->fallbacks('InflectedRoute');
 });
 
 Router::prefix('Admin', function ($routes) {
@@ -81,12 +82,13 @@ Router::scope('/', function (RouteBuilder $routes) {
      * its action called 'display', and we pass a param to select the view file
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
-    $routes->connect('/', ['controller' => 'Customers', 'action' => 'index']);
+    $routes->resources('Users');
+    $routes->connect('/', ['controller' => 'users', 'action' => 'login', 'home']);
 
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
      */
-    $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
+    $routes->connect('/pages/*', ['controller' => 'users', 'login' => 'index']);
 
     /**
      * Connect catchall routes for all controllers.
