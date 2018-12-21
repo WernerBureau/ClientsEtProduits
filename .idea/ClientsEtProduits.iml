@@ -5,6 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="App\Test\" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/cakephp/cakephp/tests" isTestSource="true" packagePrefix="Cake\Test\" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" packagePrefix="App\" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/admad/cakephp-jwt-auth" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/ajgl/breakpoint-twig-extension" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/aptoma/twig-markdown" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/asm89/twig-cache-extension" />
@@ -19,6 +20,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dnoegel/php-xdg-base-dir" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/firebase/php-jwt" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/friendsofcake/cakepdf" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/friendsofcake/crud" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/holt59/cakephp3-bootstrap-helpers" />

@@ -31,7 +31,7 @@ echo $this->Html->script('Users/add', ['block' => 'scriptBottom']);
     <fieldset>
         <legend><?= __('Edit User') ?></legend>
         <?php
-            echo $this->Form->control('email');
+            echo $this->Form->control('username');
             echo $this->Form->control('password');
 
         echo $this->Form->control('country_id', ['options' => $countries]);

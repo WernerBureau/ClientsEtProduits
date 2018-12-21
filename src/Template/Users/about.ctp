@@ -24,9 +24,26 @@
             </li>
 
             <li>
-                <?= $this->Html->link(__('Code coverage'), ['controller' => 'webroot/coverage', 'action' => 'index.html']) ?></li>
+                <?= $this->Html->link(__('Code coverage'), ['controller' => 'webroot/coverage', 'action' => 'index.html']) ?>
             </li>
         </ul>
+
+        <h4><?= __('TP3 - Updates') ?></h4>
+        <ul>
+            <li>
+                <?=$this->Html->link( __('Drag and drop'), ['controller' => 'files', 'action' => 'index']) ?>
+            </li>
+            <li>
+                <?= __('Captcha login is on the Customers (Monopage) page')?>
+            </li>
+            <li>
+                <?= __('CRUD is also using Angular on this page')?>
+            </li>
+            <li>
+                <?= __('Linked lists are on the registration page.')?>
+            </li>
+        </ul>
+
         <h4><?= __('How to use this website') ?></h4>
         <ul>
             <li>

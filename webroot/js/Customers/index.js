@@ -1,4 +1,90 @@
-var app = angular.module('app',[]);
+var onloadCallback = function () {
+    widgetId1 = grecaptcha.render('example1', {
+        'sitekey': '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
+    });
+};
+
+var app = angular.module('app', []);
+
+app.controller('usersCtrl', function ($scope, $compile, $http) {
+
+    $scope.login = function () {
+
+        if (grecaptcha.getResponse(widgetId1) === '') {
+            $scope.captcha_status = 'Please verify captcha';
+            return;
+        }
+
+        var req = {
+            method: 'POST',
+            url: 'api/users/token',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            data: {username: $scope.username, password: $scope.password}
+        }
+        // fields in key-value pairs
+        $http(req)
+            .success(function (jsonData, status, headers, config) {
+
+                localStorage.setItem('token', jsonData.data.token);
+                localStorage.setItem('user_id', jsonData.data.id);
+
+
+                // Switch button for Logout
+                $('#logDiv').html(
+                    $compile('<a href="javascript:void(0);" class="glyphicon glyphicon-log-out" id="login-btn" onclick="javascript:$(\'#changeForm\').slideToggle();">Logout/Modify</a>')($scope)
+                );
+
+
+                $('#loginForm').slideUp();
+
+                //$scope.messageLogin = 'Welcome!';
+                $scope.errorLogin = '';
+            })
+
+            .error(function (data, status, headers, config) {
+                $scope.messageLogin = '';
+                $scope.errorLogin = 'Invalid credentials';
+            });
+
+    }
+
+    $scope.logout = function () {
+        localStorage.setItem('token', "no token");
+
+        $('#logDiv').html(
+            $compile('<a href="javascript:void(0);" class="glyphicon glyphicon-log-in" id="login-btn" onclick="javascript:$(\'#loginForm\').slideToggle();">Login</a>')($scope)
+        );
+
+        $('#changeForm').slideUp();
+        $scope.messageLogin = 'You have logged out';
+        $scope.errorLogin = '';
+
+    }
+    $scope.changePassword = function () {
+        var req = {
+            method: 'PUT',
+            url: 'api/users/' + localStorage.getItem("user_id"),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + localStorage.getItem("token")
+            },
+            data: {'password': $scope.newPassword}
+        }
+        $http(req)
+            .success(function (response) {
+                $('#changeForm').slideUp();
+                $scope.messageLogin = 'Password successfully changed! ';
+            })
+            .error(function (response) {
+                $scope.errorLogin = 'Impossible to change the password!';
+
+            });
+    };
+});
 
 app.controller('CustomerCRUDController', ['$scope','CustomerCRUDService', function ($scope,CustomerCRUDService) {
 
@@ -153,5 +239,9 @@ app.service('CustomerCRUDService',['$http', function ($http) {
 
         });
     }
-
 }]);
+
+$(document).ready(function () {
+    localStorage.setItem('token', "no token");
+    $('#changePass').hide();
+});

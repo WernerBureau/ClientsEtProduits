@@ -19,8 +19,8 @@ echo $this->Html->css(['https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/b
 echo $this->Html->script([
     'https://code.jquery.com/jquery-3.3.1.slim.min.js',
     'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js',
-    'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js',
-    'https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js'
+    "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js",
+    'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'
 ]);
 
 $cakeDescription = 'Werner Burat - Clients et Produits';
@@ -50,6 +50,7 @@ $cakeDescription = 'Werner Burat - Clients et Produits';
     ], ['block' => 'scriptLibraries']
     );
     ?>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 
 </head>
 <body>
